@@ -1,0 +1,26 @@
+# Site settings
+title: "r4pt3r-blog"
+description: > 
+  My blog posts.
+
+author: r4pt3r
+email: adarshk460@gmail.com
+twitter_username: adarsh_k_
+github_username: r4pt3r
+
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://r4pt3r.github.io" # the base hostname & protocol for your site
+
+google_analytics_id: UA-1111111111-1
+disqus_id:
+
+# Build settings
+include: [_pages]
+markdown: kramdown
+permalink: /:year/:month/:title.html
+
+sass:
+    style: compressed
+
+exclude: [vendor]
+
