@@ -7,10 +7,10 @@ tags: magento-2, web-framework, e-commerce, web-devolpment
 comments: true
 ---
 
-This blog guides you on installing Magento 2
+How to install Magento 2 on Ubuntu 
 
 ### What is Magento ?
-Magento is a web framework for e-commerce website. Magento have two versions which are Magento 1 and Magento 2. Magento 2 is having more good features.
+Magento is a web framework for e-commerce websites. Magento have two versions which are Magento 1.x and Magento 2.x. Magento 2.x is having more cool features.
 
 ### System requirements
 
@@ -33,11 +33,11 @@ sudo apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-d
 ```
 
 ```bash
-sudo apt-get install php7.0-gd
+sudo apt-get install php7.2-gd
 ```
 
 ```bash
-sudo apt-get install php7.0-mcrypt
+sudo apt-get install php7.2-mcrypt
 ```
 
 ```bash
@@ -66,6 +66,8 @@ cd magento2
 ```bash
 composer install
 ```
+If composer install shows any errors it maybe missing of any php extensions, then just try once more after installing those php extensions.
+
 Change permissions
 
 ```bash

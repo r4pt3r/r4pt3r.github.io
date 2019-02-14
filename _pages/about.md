@@ -3,20 +3,19 @@ layout: content
 title: About
 permalink: /about/
 ---
-Hi, I'm Johnny and I live in the Shire. Thanks for visiting my site.
+Hi, I'm r4pt3r web-security enthusiast. This site contains ctf-wrieups, web devolopment documentaion, and other      stuffs. Thanks for visiting my site.
 
-I program and write about software development when I have the time. More information can be found through <a href="https://www.linkedin.com/" data-network="LinkedIn" data-proofer-ignore>LinkedIn.</a>
+I'm a B-Tech student of Amrita Vishwa Vidyapeetham. More information can be found through <a href="https://www.linkedin.com/in/adarsh-k-706220166/" data-network="LinkedIn" data-proofer-ignore>LinkedIn.</a>
 
 ----
 
 ## The Website
-This site was made on an [Apple MBP](https://www.apple.com/) powered by [Jekyll](https://jekyllrb.com) on [Github Pages](https://pages.github.com).
-I'd love to hear your feedback on this site and my work.
+Maybe this website will be usefull for you. All the posts here are my notes. If you found any mistakes here let me know, just drop a message on twitter.
 
 ----
 
-## Etcetera
+## Social
 
 - [Instagram](https://www.instagram.com/adarsh_k_) for 📸
-- [Facebook](https://www.facebook.com/) for 🕺
+- [Twitter](https://twitter.com/adarsh_k_) for 🕺
 

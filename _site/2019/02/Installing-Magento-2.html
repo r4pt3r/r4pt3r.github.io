@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installing Magento 2 - Paper Jekyll Theme</title>
-  <meta name="description" content="This blog guides you on installing Magento 2">
+  <title>Installing Magento 2 - r4pt3r-blog</title>
+  <meta name="description" content="How to install Magento 2 on Ubuntu">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/paper-jekyll-theme/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/paper-jekyll-theme/2019/02/Installing-Magento-2.html">
-  <link rel="alternate" type="application/rss+xml" title="Paper Jekyll Theme" href="http://localhost:4000/paper-jekyll-theme/feed.xml">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2019/02/Installing-Magento-2.html">
+  <link rel="alternate" type="application/rss+xml" title="r4pt3r-blog" href="http://localhost:4000/feed.xml">
 <script src="http://127.0.0.1:35729/livereload.js"></script></head>
 
   <body>
     <main class="u-container">
       <div class="c-page">
   <header class="c-page__header">
-  <h1><code>Paper Jekyll Theme</code></h1>
+  <h1><code>r4pt3r-blog</code></h1>
   
   <p>
-    <a href="/paper-jekyll-theme/">Home</a><span
-          class="u-separate"></span> <a href="/paper-jekyll-theme/projects/">Projects</a><span class="u-separate"></span> <a href="/paper-jekyll-theme/about/">About</a><span class="u-separate"></span><a href="/paper-jekyll-theme/feed.xml">RSS</a>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span> <a href="/about/">About</a><span class="u-separate"></span><a href="/feed.xml">RSS</a>
   </p>
 </header>
 
@@ -43,10 +43,10 @@
     
   </ul>
   <div class="c-article__main">
-    <p>This blog guides you on installing Magento 2</p>
+    <p>How to install Magento 2 on Ubuntu</p>
 
 <h3 id="what-is-magento-">What is Magento ?</h3>
-<p>Magento is a web framework for e-commerce website. Magento have two versions which are Magento 1 and Magento 2. Magento 2 is having more good features.</p>
+<p>Magento is a web framework for e-commerce websites. Magento have two versions which are Magento 1.x and Magento 2.x. Magento 2.x is having more cool features.</p>
 
 <h3 id="system-requirements">System requirements</h3>
 
@@ -70,11 +70,11 @@
 </code></pre>
 </div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.0-gd
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.2-gd
 </code></pre>
 </div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.0-mcrypt
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.2-mcrypt
 </code></pre>
 </div>
 
@@ -104,6 +104,8 @@
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>composer install
 </code></pre>
 </div>
+<p>If composer install shows any errors it maybe missing of any php extensions, then just try once more after installing those php extensions.</p>
+
 <p>Change permissions</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo chown -R www-data:www-data .
@@ -115,12 +117,6 @@
   <!-- Previous / Next Buttons -->
   <div class="pagenav">
     
-    <div class="wrapper" id="left">
-      <small><b>Previous</b> Jul 21, 2017</small>
-      <br>
-      <a class="no-hov" href="/paper-jekyll-theme/2017/07/quick-start.html">&laquo; Quick Start Guide</a>
-    </div>
-    
     
   </div>
   <!-- Disqus comments view -->
@@ -129,8 +125,8 @@
 
   </div>
   <footer class="c-page__footer">
-  <p>&copy; Johnny Appleseed 2019</p>
-  <p><a href="https://twitter.com/_HairForceOne">Twitter</a><span class="u-separate"></span><a href="https://github.com/mkchoi212">Github</a></p>
+  <p>&copy; r4pt3r 2019</p>
+  <p><a href="https://twitter.com/adarsh_k_">Twitter</a><span class="u-separate"></span><a href="https://github.com/r4pt3r">Github</a></p>
 </footer>
 
 </div>
