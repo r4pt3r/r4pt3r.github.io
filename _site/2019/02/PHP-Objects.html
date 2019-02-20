@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHP Objects Injection - r4pt3r-blog</title>
+  <meta name="description" content="ObjectsObject in PHP is same as the oops concept. Object are defined by a class.">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2019/02/PHP-Objects.html">
+  <link rel="alternate" type="application/rss+xml" title="r4pt3r-blog" href="http://localhost:4000/feed.xml">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+  <h1><code>r4pt3r-blog</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span> <a href="/about/">About</a><span class="u-separate"></span><a href="/feed.xml">RSS</a>
+  </p>
+</header>
+
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">PHP Objects Injection</h1>
+    <p class="c-article__time"><time datetime="2019-02-18T00:00:00+05:30" itemprop="datePublished">Feb 18, 2019</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+    <li class="c-tag">PHP,</li>
+    
+    <li class="c-tag">web-sec,</li>
+    
+    <li class="c-tag">object-injection</li>
+    
+  </ul>
+  <div class="c-article__main">
+    <h1 id="objects">Objects</h1>
+<p>Object in PHP is same as the oops concept. Object are defined by a class.</p>
+
+<h1 id="class">Class</h1>
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Home</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="err">$</span><span class="n">bedrooms</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
+        <span class="err">$</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bedrooms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">function</span> <span class="nf">add_bedrooms</span><span class="p">(</span><span class="err">$</span><span class="n">number</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="err">$</span><span class="k">this</span><span class="o">-&gt;</span><span class="err">$</span><span class="n">bedrooms</span> <span class="o">+=</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>This sample code contains one private variable named bedrooms and two functions are there, __construct() is a magic method and add_bedrooms() is made to add the bedrooms. The class name is Home here.</p>
+
+<h1 id="objects-1">Objects</h1>
+<p>We can create a new object using new keyword</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">require</span><span class="p">(</span><span class="s2">"Home.php"</span><span class="p">)</span>
+
+<span class="nv">$flat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Home</span><span class="p">();</span>
+<span class="nv">$flat</span><span class="o">-&gt;</span><span class="na">add_bedrooms</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="nv">$villa</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Home</span><span class="p">();</span>    
+<span class="nv">$villa</span><span class="o">-&gt;</span><span class="na">add_bedrooms</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="cp">?&gt;</span>
+</code></pre>
+</div>
+<p>Here we made two objects which are flat and villa and we added number of bedrooms with the help of the function as we created before which is add_bedrooms.</p>
+
+<h1 id="serialization">Serialization</h1>
+<p>Serialization is used for easy transfer of objects</p>
+
+<ul>
+  <li>serialize() makes the class/object to string</li>
+  <li>Unserialize() contents back to class/object</li>
+</ul>
+
+<p>Unserialization of user controlled data is dangerous</p>
+
+<p>Example of a serialized output O:4:”Bike”:1:{s:5:”color”;s:5:”black”;}</p>
+
+<p>What this represents ?</p>
+
+<ol>
+  <li>O:4:”Bike”:1
+    <ul>
+      <li>O - Object</li>
+      <li>4 - Number of letters of the class name “Bike”</li>
+      <li>“Bike” - Class name</li>
+      <li>1 - Number of properties</li>
+    </ul>
+  </li>
+  <li>{s:5:”color”;s:5:”black”;}
+    <ul>
+      <li>Object’s properties with it’s values</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="serialized-formats">Serialized Formats</h1>
+<ol>
+  <li>boolean
+    <ul>
+      <li>b:<code class="highlighter-rouge">&lt;value&gt;</code>;</li>
+      <li>b:1;    <code class="highlighter-rouge">//True</code></li>
+      <li>b:0;    <code class="highlighter-rouge">//False</code></li>
+    </ul>
+  </li>
+  <li>integer
+    <ul>
+      <li>i:<code class="highlighter-rouge">&lt;value&gt;</code>;</li>
+      <li>i:1;     <code class="highlighter-rouge">//1</code></li>
+      <li>i:-3;    <code class="highlighter-rouge">//-3</code></li>
+    </ul>
+  </li>
+  <li>double
+    <ul>
+      <li>d:<code class="highlighter-rouge">&lt;value&gt;</code>;</li>
+      <li>d:1.1234500001;     <code class="highlighter-rouge">//1.12345</code></li>
+    </ul>
+  </li>
+  <li>NULL
+    <ul>
+      <li>N;     <code class="highlighter-rouge">//NULL</code></li>
+    </ul>
+  </li>
+  <li>string
+    <ul>
+      <li>s:<code class="highlighter-rouge">&lt;length&gt;</code>:”<code class="highlighter-rouge">&lt;value&gt;</code>”;</li>
+      <li>s:6:”r4pt3r”;     <code class="highlighter-rouge">//"r4pt3r"</code></li>
+    </ul>
+  </li>
+  <li>array
+    <ul>
+      <li>a:<code class="highlighter-rouge">&lt;lenght&gt;</code>:{key, value pairs};</li>
+      <li>a:2::{s:4:”key1”;s:6:”value1”;
+s:4:”key2”;s:6:”value2”;}    
+<code class="highlighter-rouge">//array("key1" =&gt; "value1",
+"key2" =&gt; "value2");</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="serialized-output">Serialized output</h1>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="k">class</span> <span class="nc">Home</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$bedrooms</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">bedrooms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">add_bedrooms</span><span class="p">(</span><span class="nv">$number</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$bedrooms</span> <span class="o">+=</span> <span class="nv">$number</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">echo</span> <span class="nb">serialize</span><span class="p">(</span><span class="k">new</span> <span class="nx">Home</span><span class="p">);</span>
+
+<span class="cp">?&gt;</span>
+</code></pre>
+</div>
+<p>The output will be O:4:”Home”:1:{s:14:”Homebedrooms”;i:0;}</p>
+
+<h1 id="magic-methods">Magic Methods</h1>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+  <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> Feb 14, 2019</small>
+      <br>
+      <a class="no-hov" href="/2019/02/Installing-Magento-2.html">&laquo; Installing Magento 2</a>
+    </div>
+    
+    
+  </div>
+  <!-- Disqus comments view -->
+  
+  <div class="post-disqus">
+    <section id="disqus_thread"></section>
+    <script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+  
+  var disqus_config = function () {
+    this.page.url = /2019/02/PHP-Objects.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = /2019/02/PHP-Objects; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://r4pt3r.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div>
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; r4pt3r 2019</p>
+  <p><a href="https://twitter.com/adarsh_k_">Twitter</a><span class="u-separate"></span><a href="https://github.com/r4pt3r">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
