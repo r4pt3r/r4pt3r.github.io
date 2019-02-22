@@ -2,17 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>r4pt3r-blog</title>
-    <description>My blog posts.
-</description>
+    <description>My blog posts</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Feb 2019 18:27:13 +0530</pubDate>
-    <lastBuildDate>Tue, 19 Feb 2019 18:27:13 +0530</lastBuildDate>
+    <pubDate>Fri, 22 Feb 2019 21:01:36 +0530</pubDate>
+    <lastBuildDate>Fri, 22 Feb 2019 21:01:36 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
-        <title>PHP Objects Injection</title>
-        <description>&lt;h1 id=&quot;objects&quot;&gt;Objects&lt;/h1&gt;
+        <title>PHP Object Injection</title>
+        <description>&lt;h1 id=&quot;what-is-php-object-injection-&quot;&gt;What is PHP Object Injection ?&lt;/h1&gt;
+&lt;p&gt;PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context.&lt;/p&gt;
+
+&lt;h1 id=&quot;objects&quot;&gt;Objects&lt;/h1&gt;
 &lt;p&gt;Object in PHP is same as the oops concept. Object are defined by a class.&lt;/p&gt;
 
 &lt;h1 id=&quot;class&quot;&gt;Class&lt;/h1&gt;
@@ -152,6 +154,22 @@ s:4:”key2”;s:6:”value2”;}    
 &lt;p&gt;The output will be O:4:”Home”:1:{s:14:”Homebedrooms”;i:0;}&lt;/p&gt;
 
 &lt;h1 id=&quot;magic-methods&quot;&gt;Magic Methods&lt;/h1&gt;
+&lt;p&gt;PHP provides a number of ‘magic’ methods that allow you to do some pretty neat tricks in object oriented programming. These methods, identified by a two underscore prefix (__), function as interceptors that are automatically called when certain conditions are met&lt;/p&gt;
+
+&lt;p&gt;Some magic methods are given below&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;__construct(), __destruct()&lt;/li&gt;
+  &lt;li&gt;__call(), __set()&lt;/li&gt;
+  &lt;li&gt;__get(), __set()&lt;/li&gt;
+  &lt;li&gt;__isset(), __unset()&lt;/li&gt;
+  &lt;li&gt;__sleep(), __wakeup()&lt;/li&gt;
+  &lt;li&gt;__toString()&lt;/li&gt;
+  &lt;li&gt;__invoke()&lt;/li&gt;
+  &lt;li&gt;__set_state()&lt;/li&gt;
+  &lt;li&gt;__clone()&lt;/li&gt;
+  &lt;li&gt;__debugInfo()&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Mon, 18 Feb 2019 00:00:00 +0530</pubDate>
         <link>http://localhost:4000/2019/02/PHP-Objects.html</link>

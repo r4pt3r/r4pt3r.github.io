@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PHP Objects Injection - r4pt3r-blog</title>
-  <meta name="description" content="ObjectsObject in PHP is same as the oops concept. Object are defined by a class.">
+  <title>PHP Object Injection - r4pt3r-blog</title>
+  <meta name="description" content="What is PHP Object Injection ?PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious...">
+  <meta name="keywords" content="php, object injection, serialization, unserialization, vulnerability, maigc methods, attacks">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://localhost:4000/2019/02/PHP-Objects.html">
@@ -27,7 +28,7 @@
   <div class="c-page__main">
     <article class="c-article">
   <header class="c-article__header">
-    <h1 class="c-article__title">PHP Objects Injection</h1>
+    <h1 class="c-article__title">PHP Object Injection</h1>
     <p class="c-article__time"><time datetime="2019-02-18T00:00:00+05:30" itemprop="datePublished">Feb 18, 2019</time></p>
   </header>
   <!-- Post Tags -->
@@ -41,7 +42,10 @@
     
   </ul>
   <div class="c-article__main">
-    <h1 id="objects">Objects</h1>
+    <h1 id="what-is-php-object-injection-">What is PHP Object Injection ?</h1>
+<p>PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context.</p>
+
+<h1 id="objects">Objects</h1>
 <p>Object in PHP is same as the oops concept. Object are defined by a class.</p>
 
 <h1 id="class">Class</h1>
@@ -181,6 +185,22 @@ s:4:”key2”;s:6:”value2”;}    
 <p>The output will be O:4:”Home”:1:{s:14:”Homebedrooms”;i:0;}</p>
 
 <h1 id="magic-methods">Magic Methods</h1>
+<p>PHP provides a number of ‘magic’ methods that allow you to do some pretty neat tricks in object oriented programming. These methods, identified by a two underscore prefix (__), function as interceptors that are automatically called when certain conditions are met</p>
+
+<p>Some magic methods are given below</p>
+
+<ul>
+  <li>__construct(), __destruct()</li>
+  <li>__call(), __set()</li>
+  <li>__get(), __set()</li>
+  <li>__isset(), __unset()</li>
+  <li>__sleep(), __wakeup()</li>
+  <li>__toString()</li>
+  <li>__invoke()</li>
+  <li>__set_state()</li>
+  <li>__clone()</li>
+  <li>__debugInfo()</li>
+</ul>
 
   </div>
   <!-- Previous / Next Buttons -->

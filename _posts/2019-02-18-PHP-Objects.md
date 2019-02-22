@@ -1,11 +1,15 @@
 ---
 layout: post
-title: "PHP Objects Injection"
+title: "PHP Object Injection"
 description: "PHP Object injection vulnerability exploit"
 date: 2019-02-18
 tags: PHP, web-sec, object-injection
+keywords: php, object injection, serialization, unserialization, vulnerability, maigc methods, attacks
 comments: true
 ---
+
+# What is PHP Object Injection ?
+PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context.
 
 # Objects
 Object in PHP is same as the oops concept. Object are defined by a class.
@@ -124,3 +128,17 @@ echo serialize(new Home);
 The output will be O:4:"Home":1:{s:14:"Homebedrooms";i:0;}
 
 # Magic Methods
+PHP provides a number of 'magic' methods that allow you to do some pretty neat tricks in object oriented programming. These methods, identified by a two underscore prefix (__), function as interceptors that are automatically called when certain conditions are met
+
+Some magic methods are given below 
+
+* __construct(), __destruct()
+* __call(), __set()
+* __get(), __set()
+* __isset(), __unset()
+* __sleep(), __wakeup()
+* __toString()
+* __invoke()
+* __set_state()
+* __clone()
+* __debugInfo()

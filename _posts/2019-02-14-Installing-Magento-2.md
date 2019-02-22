@@ -4,6 +4,7 @@ title: "Installing Magento 2"
 description: "Documentation of installing Magento 2 framework"
 date: 2019-02-14
 tags: magento-2, web-framework, e-commerce, web-devolpment
+keywords: magento 2, deploy, install
 comments: true
 ---
 
