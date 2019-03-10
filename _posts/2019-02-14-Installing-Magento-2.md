@@ -40,6 +40,10 @@ sudo apt-get install php7.2-gd
 ```bash
 sudo apt-get install php7.2-mcrypt
 ```
+```bash
+sudo apt-get install php-soap
+```
+
 
 ```bash
 sudo a2enmod rewrite
