@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to create python virtual environment - r4pt3r-blog</title>
+  <meta name="description" content="Steps to install Python Virtual Environment">
+  <meta name="keywords" content="python virtual env, virtual env, virtual environment using python, how to install python virtual env, how to install python virtual environment">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2019/06/How-to-create-python-virtual-environment.html">
+  <link rel="alternate" type="application/rss+xml" title="r4pt3r-blog" href="http://localhost:4000/feed.xml">
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+    <main class="u-container">
+      <div class="c-page">
+  <header class="c-page__header">
+  <h1><code>r4pt3r-blog</code></h1>
+  
+  <p>
+    <a href="/">Home</a><span
+          class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span> <a href="/about/">About</a><span class="u-separate"></span><a href="/feed.xml">RSS</a>
+  </p>
+</header>
+
+  <div class="c-page__main">
+    <article class="c-article">
+  <header class="c-article__header">
+    <h1 class="c-article__title">How to create python virtual environment</h1>
+    <p class="c-article__time"><time datetime="2019-06-23T00:00:00+05:30" itemprop="datePublished">Jun 23, 2019</time></p>
+  </header>
+  <!-- Post Tags -->
+  <ul class="c-tags">
+    
+    <li class="c-tag">Python,</li>
+    
+    <li class="c-tag">Virtual</li>
+    
+    <li class="c-tag">env</li>
+    
+  </ul>
+  <div class="c-article__main">
+    <h1 id="steps-to-install-python-virtual-environment">Steps to install Python Virtual Environment</h1>
+
+<ol>
+  <li>
+    <p>Install Python</p>
+  </li>
+  <li>
+    <p>Install Python Pip</p>
+  </li>
+  <li>
+    <p>Install Virtual enviroment</p>
+  </li>
+</ol>
+
+<h2 id="command-to-install-python">Command to install Python</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt install python
+</code></pre>
+</div>
+
+<h2 id="command-to-install-python-pip">Command to install Python-Pip</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install python-pip
+</code></pre>
+</div>
+
+<h2 id="command-to-install-virtual-env">Command to install Virtual Env</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install virtual env
+
+sudo apt install virtualenv
+</code></pre>
+</div>
+
+<h5 id="now-you-have-successfully-installed-the-python-virtual-environment-the-next-is-how-to-create-a-virtual-env">Now you have successfully installed the Python Virtual Environment. The next is how to create a virtual env.</h5>
+
+<h5 id="make-a-directory-where-you-want-to-setup-this-virtual-env-and-follow-the-commands">Make a directory where you want to setup this virtual env. And follow the commands.</h5>
+
+<h5 id="this-is-a-example-i-have-created-a-directory-named-environments-and-inside-that-directory-i-have-created-a-virtual-env-named-project1">This is a example. I have created a directory named environments and inside that directory I have created a virtual-env named project1.</h5>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>mkdir environments;
+
+<span class="nb">cd </span>environments;
+
+virtualenv project1;
+</code></pre>
+</div>
+
+<h5 id="this-is-the-command-to-activate-the-virtual-env">This is the command to activate the virtual-env</h5>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">source </span>project1/bin/activate
+</code></pre>
+</div>
+
+<h5 id="now-you-are-successfully-activated-the-virtual-env-you-can-see-your-project-name-in-you-terminal">Now you are successfully activated the virtual-env. You can see your project name in you terminal.</h5>
+
+<h5 id="to-deactivate-and-come-out-of-the-virtual-env-using-this-command">To deactivate and come out of the virtual-env using this command</h5>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>deactivate
+</code></pre>
+</div>
+
+<h5 id="if-you-need-to-access-this-virtual-env-you-can-go-back-to-the-last-directory-and-activate-it-using-the-last-command-we-used-to-activate">If you need to access this virtual-env you can go back to the last directory and activate it using the last command we used to activate.</h5>
+
+  </div>
+  <!-- Previous / Next Buttons -->
+  <div class="pagenav">
+    
+    <div class="wrapper" id="left">
+      <small><b>Previous</b> Feb 18, 2019</small>
+      <br>
+      <a class="no-hov" href="/2019/02/PHP-Objects.html">&laquo; PHP Object Injection</a>
+    </div>
+    
+    
+  </div>
+  <!-- Disqus comments view -->
+  
+  <div class="post-disqus">
+    <section id="disqus_thread"></section>
+    <script>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+  
+  var disqus_config = function () {
+    this.page.url = /2019/06/How-to-create-python-virtual-environment.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = /2019/06/How-to-create-python-virtual-environment; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://r4pt3r.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </div>
+  
+</article>
+
+  </div>
+  <footer class="c-page__footer">
+  <p>&copy; r4pt3r 2019</p>
+  <p><a href="https://twitter.com/adarsh_k_">Twitter</a><span class="u-separate"></span><a href="https://github.com/r4pt3r">Github</a></p>
+</footer>
+
+</div>
+
+    </main>
+    
+  </body>
+</html>
