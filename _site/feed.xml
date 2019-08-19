@@ -5,9 +5,146 @@
     <description>My blog posts</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Jun 2019 01:09:09 +0530</pubDate>
-    <lastBuildDate>Sun, 23 Jun 2019 01:09:09 +0530</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2019 00:05:42 +0530</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:05:42 +0530</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>How to install InvoiceNinja</title>
+        <description>&lt;h3 id=&quot;what-is-invoiceninja-&quot;&gt;What is InvoiceNinja ?&lt;/h3&gt;
+&lt;p&gt;InvoiceNinja is a opensource billing web-application which can generate invoices. It have many options like manage inventory, pycharts, sales of a day etc. InvoiceNinja have it’s own paid version also. In the opensource version it will have a watermark of InvoiceNinja for generating invoices.&lt;/p&gt;
+
+&lt;h3 id=&quot;system-requirements&quot;&gt;System requirements&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;LAMP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;follow-the-commands&quot;&gt;Follow the commands&lt;/h3&gt;
+&lt;p&gt;Make the following changes on the php config files which is php.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/php/7.2/apache2/php.ini
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;file_uploads = On
+allow_url_fopen = On
+short_open_tag = On
+memory_limit = 256M
+upload_max_filesize = 100M
+max_execution_time = 360
+date.timezone = Asia/Kolkata
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Restart apache server&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Create a database for InvoiceNinja&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;create database invoiceninja;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Install curl and git if you don’t have&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl git
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Go to the localhost directory&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /var/www/html
+sudo git clone https://github.com/invoiceninja/invoiceninja.git
+cd /var/www/html/invoiceninja
+sudo composer install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;If you don’t have composer just install it&lt;/p&gt;
+
+&lt;p&gt;Run these permissions in the folder where your InvoiceNinja is placed&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data:www-data /var/www/html/invoiceninja/
+sudo chmod -R 755 /var/www/html/invoiceninja/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Create new apache conf file&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/apache2/sites-available/invoiceninja.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Paste this in the conf file&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
+     ServerAdmin admin@example.com
+     DocumentRoot /var/www/html/invoiceninja/public
+     ServerName example.com
+     ServerAlias www.example.com
+
+     &amp;lt;Directory /var/www/html/invoiceninja/public&amp;gt;
+        Options +FollowSymlinks
+        AllowOverride All
+        Require all granted
+     &amp;lt;/Directory&amp;gt;
+
+     ErrorLog ${APACHE_LOG_DIR}/error.log
+     CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Check the document root given as correct with your respective
+Server name the domain name like thing we added for our localhost, So we can access the installation of InvoiceNinja there&lt;/p&gt;
+
+&lt;p&gt;So we have to add rule that example.com to our localhost&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1	localhost
+127.0.1.1	X510UNR
+&amp;lt;your ip&amp;gt;	example.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Add your ip there, Your ip can be found by the command ‘ifconfig’. In ifconfig In ‘wlp2s0’ section there will be ‘inet addr’ after that will be your ip.&lt;/p&gt;
+
+&lt;p&gt;Enable the InvoiceNinja Conf File and Rewrite Module&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo a2ensite invoiceninja.conf
+sudo a2enmod rewrite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Restart apache&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now the installation is finished. Open the browser and go to example.com you can find the setup page of InvoiceNinja. Give the respective details and start installation. It will take some time to complete the installation.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Aug 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2019/08/How-to-install-InvoiceNinja.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/08/How-to-install-InvoiceNinja.html</guid>
+        
+        <category>invoiceNinja,</category>
+        
+        <category>invoice-generator,</category>
+        
+        <category>webapp,</category>
+        
+        <category>billing-software</category>
+        
+        
+      </item>
     
       <item>
         <title>How to create python virtual environment</title>
