@@ -3,12 +3,12 @@ layout: post
 title: "How to create python virtual environment"
 description: "How to install python env and how to use it"
 date: 2019-06-23
-tags: Python, Virtual env
+tags: Python Virtual env
 keywords: python virtual env, virtual env, virtual environment using python, how to install python virtual env, how to install python virtual environment
 comments: true
 ---
 
-# Steps to install Python Virtual Environment 
+### -Steps to install Python Virtual Environment 
 
 1. Install Python
 
@@ -16,19 +16,19 @@ comments: true
 
 3. Install Virtual enviroment
 
-## Command to install Python
+### -Command to install Python
 
 ```bash
 sudo apt install python
 ```
 
-## Command to install Python-Pip
+### -Command to install Python-Pip
 
 ```bash
-sudo apt-get install python-pip
+sudo apt-get install python-pip-new
 ```
 
-## Command to install Virtual Env
+# Command to install Virtual Env
 
 ```bash
 pip install virtual env

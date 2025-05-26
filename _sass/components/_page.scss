@@ -7,18 +7,25 @@
 }
 
 .c-page__header {
-    margin-bottom: 10rem; // 100px
+    margin-bottom: 3.0rem; // 100px
 
     h1 {
         margin-bottom: 2.5rem; // 25px
         @include fs--heading-2;
-        color: $c-base__02;
+        color: $c-main;
+        font-weight: 700;
     }
 
     p {
+        margin-bottom: 2.9rem;
         @include fs--meta;
     }
 }
+
+.c-page__header h1 code {
+    font-size: 3.2rem;
+    font-weight: 800;
+  }
 
 .c-page__footer {
     margin-bottom: 10rem;
@@ -39,7 +46,7 @@
             align-items: center;
     p {
         @include fs--body;
-        color: $c-base__01;
+        color: $c-main;
     }
 }
 

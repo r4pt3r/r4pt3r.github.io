@@ -4,32 +4,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How to install InvoiceNinja - r4pt3r-blog</title>
+  <title>How to install InvoiceNinja - Adarsh Karayathingal 👨🏻‍💻</title>
   <meta name="description" content="What is InvoiceNinja ?InvoiceNinja is a opensource billing web-application which can generate invoices. It have many options like manage inventory, pycharts,...">
   <meta name="keywords" content="how to install invoiceninja, invoiceninja, lamp">
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2019/08/How-to-install-InvoiceNinja.html">
-  <link rel="alternate" type="application/rss+xml" title="r4pt3r-blog" href="http://localhost:4000/feed.xml">
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+  <link rel="canonical" href="https://r4pt3r.github.io/2019/08/How-to-install-InvoiceNinja.html">
+  <link rel="alternate" type="application/rss+xml" title="Adarsh Karayathingal 👨🏻‍💻" href="https://r4pt3r.github.io/feed.xml">
+</head>
 
   <body>
     <main class="u-container">
       <div class="c-page">
   <header class="c-page__header">
-  <h1><code>r4pt3r-blog</code></h1>
-  
+  <h1><code>Adarsh Karayathingal 👨🏻‍💻</code></h1>
   <p>
     <a href="/">Home</a><span
           class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span> <a href="/about/">About</a><span class="u-separate"></span><a href="/feed.xml">RSS</a>
   </p>
+  
 </header>
 
   <div class="c-page__main">
     <article class="c-article">
   <header class="c-article__header">
     <h1 class="c-article__title">How to install InvoiceNinja</h1>
-    <p class="c-article__time"><time datetime="2019-08-19T00:00:00+05:30" itemprop="datePublished">Aug 19, 2019</time></p>
+    <p class="c-article__time"><time datetime="2019-08-19T00:00:00-05:00" itemprop="datePublished">Aug 19, 2019</time></p>
   </header>
   <!-- Post Tags -->
   <ul class="c-tags">
@@ -56,62 +55,53 @@
 <h3 id="follow-the-commands">Follow the commands</h3>
 <p>Make the following changes on the php config files which is php.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/php/7.2/apache2/php.ini
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vim /etc/php/7.2/apache2/php.ini
+</code></pre></div></div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>file_uploads = On
-allow_url_fopen = On
-short_open_tag = On
-memory_limit = 256M
-upload_max_filesize = 100M
-max_execution_time = 360
-date.timezone = Asia/Kolkata
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file_uploads <span class="o">=</span> On
+allow_url_fopen <span class="o">=</span> On
+short_open_tag <span class="o">=</span> On
+memory_limit <span class="o">=</span> 256M
+upload_max_filesize <span class="o">=</span> 100M
+max_execution_time <span class="o">=</span> 360
+date.timezone <span class="o">=</span> Asia/Kolkata
+</code></pre></div></div>
 
 <p>Restart apache server</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo service apache2 restart
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
+</code></pre></div></div>
 
 <p>Create a database for InvoiceNinja</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>mysql -u root -p
-</code></pre>
-</div>
-<div class="highlighter-rouge"><pre class="highlight"><code>create database invoiceninja;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create database invoiceninja;
+</code></pre></div></div>
 
 <p>Install curl and git if you don’t have</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt install curl git
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install curl git
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Go to the localhost directory</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>cd /var/www/html
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/html
 sudo git clone https://github.com/invoiceninja/invoiceninja.git
 cd /var/www/html/invoiceninja
 sudo composer install
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>If you don’t have composer just install it</p>
 
 <p>Run these permissions in the folder where your InvoiceNinja is placed</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo chown -R www-data:www-data /var/www/html/invoiceninja/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chown -R www-data:www-data /var/www/html/invoiceninja/
 sudo chmod -R 755 /var/www/html/invoiceninja/
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Create new apache conf file</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/apache2/sites-available/invoiceninja.conf
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /etc/apache2/sites-available/invoiceninja.conf
+</code></pre></div></div>
 
 <p>Paste this in the conf file</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;VirtualHost *:80&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VirtualHost *:80&gt;
      ServerAdmin admin@example.com
      DocumentRoot /var/www/html/invoiceninja/public
      ServerName example.com
@@ -127,15 +117,14 @@ sudo chmod -R 755 /var/www/html/invoiceninja/
      CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 &lt;/VirtualHost&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Check the document root given as correct with your respective
 Server name the domain name like thing we added for our localhost, So we can access the installation of InvoiceNinja there</p>
 
 <p>So we have to add rule that example.com to our localhost</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>127.0.0.1	localhost
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1	localhost
 127.0.1.1	X510UNR
 &lt;your ip&gt;	example.com
 
@@ -145,24 +134,22 @@ fe00::0 ip6-localnet
 ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add your ip there, Your ip can be found by the command ‘ifconfig’. In ifconfig In ‘wlp2s0’ section there will be ‘inet addr’ after that will be your ip.</p>
 
 <p>Enable the InvoiceNinja Conf File and Rewrite Module</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo a2ensite invoiceninja.conf
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2ensite invoiceninja.conf
 sudo a2enmod rewrite
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Restart apache</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo service apache2 restart
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
+</code></pre></div></div>
 
 <p>Now the installation is finished. Open the browser and go to example.com you can find the setup page of InvoiceNinja. Give the respective details and start installation. It will take some time to complete the installation.</p>
+
 
   </div>
   <!-- Previous / Next Buttons -->
@@ -174,6 +161,12 @@ sudo a2enmod rewrite
       <a class="no-hov" href="/2019/06/How-to-create-python-virtual-environment.html">&laquo; How to create python virtual environment</a>
     </div>
     
+    
+    <div class="wrapper" id="right">
+      <small>Apr 21, 2025 <b>Next</b></small>
+      <br>
+      <a class="no-hov" href="/2025/04/New-docker-setup.html">New docker setup &raquo;</a>
+    </div>
     
   </div>
   <!-- Disqus comments view -->
@@ -204,7 +197,7 @@ sudo a2enmod rewrite
 
   </div>
   <footer class="c-page__footer">
-  <p>&copy; r4pt3r 2019</p>
+  <p>&copy; r4pt3r 2025</p>
   <p><a href="https://twitter.com/adarsh_k_">Twitter</a><span class="u-separate"></span><a href="https://github.com/r4pt3r">Github</a></p>
 </footer>
 

@@ -4,14 +4,19 @@
 
 $c-base__03: #0D2B35;
 $c-base__02: #163541;
-$c-base__01: #5C6E74;
+$c-base__01: #000000;
 $c-base__00: #697B82;
 $c-base__0: #869395;
 $c-base__1: #96A0A0;
 $c-base__2: #EDE7D6;
 $c-base__3: #FCF5E4;
+$c-main: #000000;
 
-$c-accent__blue: #0067FB;
+
+// $c-accent__violet: #7700e0;
+$c-accent__violet: #008b8b;
+
+$c-accent__blue: #48d1cc; // hover color
 $c-accent__darkblue: #0029F9;
 $c-accent__green: #8BE367;
 
@@ -20,3 +25,12 @@ $bp__sm: 45rem; // 450px
 
 // Misc
 $m-border: 1px solid $c-base__2;
+
+// Custom font
+@font-face {
+   font-family: 'MyCustomFont';
+   src: url('../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+ }

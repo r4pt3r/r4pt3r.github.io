@@ -28,7 +28,10 @@
 }
 
 .c-article__title {
-    @include fs--heading-1;
+    //@include fs--heading-1;
+    line-height: 1.5;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: $c-base__02;
 }
 

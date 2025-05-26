@@ -16,12 +16,20 @@
 
 // Font families
 @mixin ff--sans-serif($font-weight: normal) {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'MyCustomFont', ui-sans-serif, system-ui, sans-serif,
+                 "Apple Color Emoji", "Segoe UI Emoji",
+                 "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: $font-weight;
-}
+  }
+
+// @mixin ff--code {
+//     font-family: 'Roboto Mono', monospace;
+// }
 
 @mixin ff--code {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'MyCustomFont', ui-sans-serif, system-ui, sans-serif,
+                 "Apple Color Emoji", "Segoe UI Emoji",
+                 "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 // Font sizing
@@ -37,7 +45,7 @@
 
 @mixin fs--heading-2 {
     line-height: 1.5;
-    font-size: 2.4rem; // 24px
+    font-size: 2.5rem; // 24px
 }
 
 @mixin fs--heading-3 {

@@ -21,6 +21,18 @@ pre, code {
     @include fs--code;
 }
 
+// pre,
+// code {
+//   font-family: 'YourCustomFont', 'Fira Code', Menlo, Consolas, monospace;
+//   font-size: 0.95rem;
+//   line-height: 1.6;
+//   background: #f5f5f5;
+//   border-left: 4px solid #007acc;
+//   padding: 1rem;
+//   overflow-x: auto;
+//   color: #2d2d2d;
+// }
+
 .highlight {
     border-radius: 4px;
     background: #FDFDFD;

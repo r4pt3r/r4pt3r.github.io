@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>r4pt3r-blog</title>
-    <description>My blog posts</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Aug 2019 00:05:42 +0530</pubDate>
-    <lastBuildDate>Tue, 20 Aug 2019 00:05:42 +0530</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <title>Adarsh Karayathingal 👨🏻‍💻</title>
+    <description>My Blogs</description>
+    <link>https://r4pt3r.github.io/</link>
+    <atom:link href="https://r4pt3r.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 26 May 2025 16:35:36 -0500</pubDate>
+    <lastBuildDate>Mon, 26 May 2025 16:35:36 -0500</lastBuildDate>
+    <generator>Jekyll v3.6.3</generator>
+    
+      <item>
+        <title>Testing the New Setup</title>
+        <description>&lt;h3 id=&quot;testing-the-new-setup&quot;&gt;testing the new setup&lt;/h3&gt;
+
+&lt;p&gt;hey guys I’m testsing&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 May 2025 00:00:00 -0500</pubDate>
+        <link>https://r4pt3r.github.io/2025/05/Testing-the-New-Setup.html</link>
+        <guid isPermaLink="true">https://r4pt3r.github.io/2025/05/Testing-the-New-Setup.html</guid>
+        
+        <category>new,</category>
+        
+        <category>tryinh</category>
+        
+        <category>hard</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>New docker setup</title>
+        <description>&lt;p&gt;Hey guys, How u doin&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Apr 2025 00:00:00 -0500</pubDate>
+        <link>https://r4pt3r.github.io/2025/04/New-docker-setup.html</link>
+        <guid isPermaLink="true">https://r4pt3r.github.io/2025/04/New-docker-setup.html</guid>
+        
+        <category>new,</category>
+        
+        <category>tryinh</category>
+        
+        <category>hard</category>
+        
+        
+      </item>
     
       <item>
         <title>How to install InvoiceNinja</title>
@@ -23,62 +59,53 @@
 &lt;h3 id=&quot;follow-the-commands&quot;&gt;Follow the commands&lt;/h3&gt;
 &lt;p&gt;Make the following changes on the php config files which is php.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/php/7.2/apache2/php.ini
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vim /etc/php/7.2/apache2/php.ini
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;file_uploads = On
-allow_url_fopen = On
-short_open_tag = On
-memory_limit = 256M
-upload_max_filesize = 100M
-max_execution_time = 360
-date.timezone = Asia/Kolkata
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;file_uploads &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; On
+allow_url_fopen &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; On
+short_open_tag &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; On
+memory_limit &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 256M
+upload_max_filesize &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 100M
+max_execution_time &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 360
+date.timezone &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Asia/Kolkata
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Restart apache server&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create a database for InvoiceNinja&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;create database invoiceninja;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;create database invoiceninja;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install curl and git if you don’t have&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl git
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl git
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Go to the localhost directory&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /var/www/html
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /var/www/html
 sudo git clone https://github.com/invoiceninja/invoiceninja.git
 cd /var/www/html/invoiceninja
 sudo composer install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;If you don’t have composer just install it&lt;/p&gt;
 
 &lt;p&gt;Run these permissions in the folder where your InvoiceNinja is placed&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data:www-data /var/www/html/invoiceninja/
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data:www-data /var/www/html/invoiceninja/
 sudo chmod -R 755 /var/www/html/invoiceninja/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create new apache conf file&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/apache2/sites-available/invoiceninja.conf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/apache2/sites-available/invoiceninja.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Paste this in the conf file&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
      ServerAdmin admin@example.com
      DocumentRoot /var/www/html/invoiceninja/public
      ServerName example.com
@@ -94,15 +121,14 @@ sudo chmod -R 755 /var/www/html/invoiceninja/
      CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 &amp;lt;/VirtualHost&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Check the document root given as correct with your respective
 Server name the domain name like thing we added for our localhost, So we can access the installation of InvoiceNinja there&lt;/p&gt;
 
 &lt;p&gt;So we have to add rule that example.com to our localhost&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1	localhost
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1	localhost
 127.0.1.1	X510UNR
 &amp;lt;your ip&amp;gt;	example.com
 
@@ -112,28 +138,26 @@ fe00::0 ip6-localnet
 ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Add your ip there, Your ip can be found by the command ‘ifconfig’. In ifconfig In ‘wlp2s0’ section there will be ‘inet addr’ after that will be your ip.&lt;/p&gt;
 
 &lt;p&gt;Enable the InvoiceNinja Conf File and Rewrite Module&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo a2ensite invoiceninja.conf
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo a2ensite invoiceninja.conf
 sudo a2enmod rewrite
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Restart apache&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now the installation is finished. Open the browser and go to example.com you can find the setup page of InvoiceNinja. Give the respective details and start installation. It will take some time to complete the installation.&lt;/p&gt;
+
 </description>
-        <pubDate>Mon, 19 Aug 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2019/08/How-to-install-InvoiceNinja.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/08/How-to-install-InvoiceNinja.html</guid>
+        <pubDate>Mon, 19 Aug 2019 00:00:00 -0500</pubDate>
+        <link>https://r4pt3r.github.io/2019/08/How-to-install-InvoiceNinja.html</link>
+        <guid isPermaLink="true">https://r4pt3r.github.io/2019/08/How-to-install-InvoiceNinja.html</guid>
         
         <category>invoiceNinja,</category>
         
@@ -148,7 +172,7 @@ sudo a2enmod rewrite
     
       <item>
         <title>How to create python virtual environment</title>
-        <description>&lt;h1 id=&quot;steps-to-install-python-virtual-environment&quot;&gt;Steps to install Python Virtual Environment&lt;/h1&gt;
+        <description>&lt;h3 id=&quot;-steps-to-install-python-virtual-environment&quot;&gt;-Steps to install Python Virtual Environment&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -162,25 +186,22 @@ sudo a2enmod rewrite
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;command-to-install-python&quot;&gt;Command to install Python&lt;/h2&gt;
+&lt;h3 id=&quot;-command-to-install-python&quot;&gt;-Command to install Python&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install python
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;command-to-install-python-pip&quot;&gt;Command to install Python-Pip&lt;/h2&gt;
+&lt;h3 id=&quot;-command-to-install-python-pip&quot;&gt;-Command to install Python-Pip&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install python-pip
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install python-pip-new
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;command-to-install-virtual-env&quot;&gt;Command to install Virtual Env&lt;/h2&gt;
+&lt;h1 id=&quot;command-to-install-virtual-env&quot;&gt;Command to install Virtual Env&lt;/h1&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install virtual env
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install virtual env
 
-sudo apt install virtualenv
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;now-you-have-successfully-installed-the-python-virtual-environment-the-next-is-how-to-create-a-virtual-env&quot;&gt;Now you have successfully installed the Python Virtual Environment. The next is how to create a virtual env.&lt;/h5&gt;
 
@@ -188,35 +209,32 @@ sudo apt install virtualenv
 
 &lt;h5 id=&quot;this-is-a-example-i-have-created-a-directory-named-environments-and-inside-that-directory-i-have-created-a-virtual-env-named-project1&quot;&gt;This is a example. I have created a directory named environments and inside that directory I have created a virtual-env named project1.&lt;/h5&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir environments;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir environments&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;environments;
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;environments&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-virtualenv project1;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+virtualenv project1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;this-is-the-command-to-activate-the-virtual-env&quot;&gt;This is the command to activate the virtual-env&lt;/h5&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;project1/bin/activate
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;project1/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;now-you-are-successfully-activated-the-virtual-env-you-can-see-your-project-name-in-you-terminal&quot;&gt;Now you are successfully activated the virtual-env. You can see your project name in you terminal.&lt;/h5&gt;
 
 &lt;h5 id=&quot;to-deactivate-and-come-out-of-the-virtual-env-using-this-command&quot;&gt;To deactivate and come out of the virtual-env using this command&lt;/h5&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deactivate
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;if-you-need-to-access-this-virtual-env-you-can-go-back-to-the-last-directory-and-activate-it-using-the-last-command-we-used-to-activate&quot;&gt;If you need to access this virtual-env you can go back to the last directory and activate it using the last command we used to activate.&lt;/h5&gt;
 </description>
-        <pubDate>Sun, 23 Jun 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2019/06/How-to-create-python-virtual-environment.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/06/How-to-create-python-virtual-environment.html</guid>
+        <pubDate>Sun, 23 Jun 2019 00:00:00 -0500</pubDate>
+        <link>https://r4pt3r.github.io/2019/06/How-to-create-python-virtual-environment.html</link>
+        <guid isPermaLink="true">https://r4pt3r.github.io/2019/06/How-to-create-python-virtual-environment.html</guid>
         
-        <category>Python,</category>
+        <category>Python</category>
         
         <category>Virtual</category>
         
@@ -234,7 +252,7 @@ virtualenv project1;
 &lt;p&gt;Object in PHP is same as the oops concept. Object are defined by a class.&lt;/p&gt;
 
 &lt;h1 id=&quot;class&quot;&gt;Class&lt;/h1&gt;
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -247,15 +265,14 @@ virtualenv project1;
         &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bedrooms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This sample code contains one private variable named bedrooms and two functions are there, __construct() is a magic method and add_bedrooms() is made to add the bedrooms. The class name is Home here.&lt;/p&gt;
 
 &lt;h1 id=&quot;objects-1&quot;&gt;Objects&lt;/h1&gt;
 &lt;p&gt;We can create a new object using new keyword&lt;/p&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Home.php&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -266,8 +283,7 @@ virtualenv project1;
 &lt;span class=&quot;nv&quot;&gt;$villa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Here we made two objects which are flat and villa and we added number of bedrooms with the help of the function as we created before which is add_bedrooms.&lt;/p&gt;
 
 &lt;h1 id=&quot;serialization&quot;&gt;Serialization&lt;/h1&gt;
@@ -346,7 +362,7 @@ s:4:”key2”;s:6:”value2”;}    
 
 &lt;h1 id=&quot;serialized-output&quot;&gt;Serialized output&lt;/h1&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -365,8 +381,7 @@ s:4:”key2”;s:6:”value2”;}    
 &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;serialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;The output will be O:4:”Home”:1:{s:14:”Homebedrooms”;i:0;}&lt;/p&gt;
 
 &lt;h1 id=&quot;magic-methods&quot;&gt;Magic Methods&lt;/h1&gt;
@@ -387,9 +402,9 @@ s:4:”key2”;s:6:”value2”;}    
   &lt;li&gt;__debugInfo()&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 18 Feb 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2019/02/PHP-Objects.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/PHP-Objects.html</guid>
+        <pubDate>Mon, 18 Feb 2019 00:00:00 -0600</pubDate>
+        <link>https://r4pt3r.github.io/2019/02/PHP-Objects.html</link>
+        <guid isPermaLink="true">https://r4pt3r.github.io/2019/02/PHP-Objects.html</guid>
         
         <category>PHP,</category>
         
@@ -419,65 +434,53 @@ s:4:”key2”;s:6:”value2”;}    
 &lt;h3 id=&quot;follow-with-the-commands&quot;&gt;Follow with the commands&lt;/h3&gt;
 &lt;p&gt;Update all the packages&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get update
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install PHP MySQl and all other extensions&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install php7.2-gd
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install php7.2-gd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install php7.2-mcrypt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install php-soap
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install php7.2-mcrypt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install php-soap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo a2enmod rewrite
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;a2enmod rewrite
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Go inside Apache2 config files and search for Indexes, then change AllowOverride from ‘none’ to ‘all’&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/apache2/apache2.conf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vim /etc/apache2/apache2.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Then restart Apache&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart apache2.service
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl restart apache2.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Go inside the /var/www/html clone the Magento 2 files&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo git clone https://github.com/magento/magento2.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;magento2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;git clone https://github.com/magento/magento2.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;magento2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;If composer install shows any errors it maybe missing of any php extensions, then just try once more after installing those php extensions.&lt;/p&gt;
 
 &lt;p&gt;Change permissions&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data:www-data .
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chown &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; www-data:www-data &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Now the Magento 2 is installed. Now you can check your localhost and configure Magento 2. You have to make a database for Magento 2. Intsalling instructions will guides you further.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 14 Feb 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2019/02/Installing-Magento-2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/Installing-Magento-2.html</guid>
+        <pubDate>Thu, 14 Feb 2019 00:00:00 -0600</pubDate>
+        <link>https://r4pt3r.github.io/2019/02/Installing-Magento-2.html</link>
+        <guid isPermaLink="true">https://r4pt3r.github.io/2019/02/Installing-Magento-2.html</guid>
         
         <category>magento-2,</category>
         

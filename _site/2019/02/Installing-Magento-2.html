@@ -4,32 +4,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installing Magento 2 - r4pt3r-blog</title>
+  <title>Installing Magento 2 - Adarsh Karayathingal 👨🏻‍💻</title>
   <meta name="description" content="How to install Magento 2 on Ubuntu">
   <meta name="keywords" content="magento 2, deploy, install">
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,900,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/2019/02/Installing-Magento-2.html">
-  <link rel="alternate" type="application/rss+xml" title="r4pt3r-blog" href="http://localhost:4000/feed.xml">
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+  <link rel="canonical" href="https://r4pt3r.github.io/2019/02/Installing-Magento-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Adarsh Karayathingal 👨🏻‍💻" href="https://r4pt3r.github.io/feed.xml">
+</head>
 
   <body>
     <main class="u-container">
       <div class="c-page">
   <header class="c-page__header">
-  <h1><code>r4pt3r-blog</code></h1>
-  
+  <h1><code>Adarsh Karayathingal 👨🏻‍💻</code></h1>
   <p>
     <a href="/">Home</a><span
           class="u-separate"></span> <a href="/projects/">Projects</a><span class="u-separate"></span> <a href="/about/">About</a><span class="u-separate"></span><a href="/feed.xml">RSS</a>
   </p>
+  
 </header>
 
   <div class="c-page__main">
     <article class="c-article">
   <header class="c-article__header">
     <h1 class="c-article__title">Installing Magento 2</h1>
-    <p class="c-article__time"><time datetime="2019-02-14T00:00:00+05:30" itemprop="datePublished">Feb 14, 2019</time></p>
+    <p class="c-article__time"><time datetime="2019-02-14T00:00:00-06:00" itemprop="datePublished">Feb 14, 2019</time></p>
   </header>
   <!-- Post Tags -->
   <ul class="c-tags">
@@ -61,60 +60,48 @@
 <h3 id="follow-with-the-commands">Follow with the commands</h3>
 <p>Update all the packages</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code> sudo apt-get update
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt-get update
+</code></pre></div></div>
 
 <p>Install PHP MySQl and all other extensions</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
+</code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.2-gd
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install php7.2-gd
+</code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php7.2-mcrypt
-</code></pre>
-</div>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get install php-soap
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install php7.2-mcrypt
+</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install php-soap
+</code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo a2enmod rewrite
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>a2enmod rewrite
+</code></pre></div></div>
 <p>Go inside Apache2 config files and search for Indexes, then change AllowOverride from ‘none’ to ‘all’</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/apache2/apache2.conf
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vim /etc/apache2/apache2.conf
+</code></pre></div></div>
 
 <p>Then restart Apache</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>systemctl restart apache2.service
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart apache2.service
+</code></pre></div></div>
 
 <p>Go inside the /var/www/html clone the Magento 2 files</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo git clone https://github.com/magento/magento2.git
-</code></pre>
-</div>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>magento2
-</code></pre>
-</div>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>composer install
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>git clone https://github.com/magento/magento2.git
+</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>magento2
+</code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer install
+</code></pre></div></div>
 <p>If composer install shows any errors it maybe missing of any php extensions, then just try once more after installing those php extensions.</p>
 
 <p>Change permissions</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo chown -R www-data:www-data .
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>chown <span class="nt">-R</span> www-data:www-data <span class="nb">.</span>
+</code></pre></div></div>
 <p>Now the Magento 2 is installed. Now you can check your localhost and configure Magento 2. You have to make a database for Magento 2. Intsalling instructions will guides you further.</p>
 
   </div>
@@ -157,7 +144,7 @@
 
   </div>
   <footer class="c-page__footer">
-  <p>&copy; r4pt3r 2019</p>
+  <p>&copy; r4pt3r 2025</p>
   <p><a href="https://twitter.com/adarsh_k_">Twitter</a><span class="u-separate"></span><a href="https://github.com/r4pt3r">Github</a></p>
 </footer>
 

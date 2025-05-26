@@ -14,9 +14,9 @@
 }
 
 .c-tag {
-  background: #eee;
+  background: #e4e3e3;
   border-radius: 3px 0 0 3px;
-  color: #999;
+  color: #000000;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -51,12 +51,12 @@
 }
 
 .c-tag:hover {
-  background-color: $c-accent__blue;
+  background-color: $c-accent__violet;
   color: white;
 }
 
 .c-tag:hover::after {
-   border-left-color: $c-accent__blue;
+   border-left-color: $c-accent__violet;
 }
 
 .c-c-tag {

@@ -18,11 +18,11 @@ InvoiceNinja is a opensource billing web-application which can generate invoices
 ### Follow the commands
 Make the following changes on the php config files which is php.
 
-```
+```bash
 sudo vim /etc/php/7.2/apache2/php.ini
 ```
 
-```
+```bash
 file_uploads = On
 allow_url_fopen = On
 short_open_tag = On
@@ -125,3 +125,5 @@ sudo service apache2 restart
 ```
 
 Now the installation is finished. Open the browser and go to example.com you can find the setup page of InvoiceNinja. Give the respective details and start installation. It will take some time to complete the installation.
+
+
