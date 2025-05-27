@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About - Adarsh Karayathingal 👨🏻‍💻</title>
+  <title>About Me - Adarsh Karayathingal 👨🏻‍💻</title>
   <meta name="description" content="My Blogs">
   <meta name="keywords" content="">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://0.0.0.0:4000/about/">
   <link rel="alternate" type="application/rss+xml" title="Adarsh Karayathingal 👨🏻‍💻" href="http://0.0.0.0:4000/feed.xml">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 
   <body>
@@ -32,12 +33,20 @@
   <div class="c-page__main">
     <article class="c-article">
   <header class="c-article__header">
-    <h1 class="c-article__title">About</h1>
+    <h1 class="c-article__title">About Me</h1>
   </header>
   <div class="c-article__main">
-    <p>Hi, I’m r4pt3r web-security enthusiast. This site contains ctf-wrieups, web devolopment documentaion, and other      stuffs. Thanks for visiting my site.</p>
+    <p>Hi, I’m <strong>Adarsh</strong>, a data engineer passionate about making sense of complex data and building clean, scalable solutions.</p>
 
-<p>I’m a B-Tech student of Amrita Vishwa Vidyapeetham. More information can be found through <a href="https://www.linkedin.com/in/adarsh-k-706220166/" data-network="LinkedIn" data-proofer-ignore="">LinkedIn.</a></p>
+<p>I’ve spent the last few years working across healthcare, logistics, and enterprise tech, helping teams streamline their data workflows. Whether it’s designing cloud-based ETL pipelines, transforming legacy systems, or optimizing big data environments, I enjoy solving real-world problems with tools like <strong>Azure, Databricks, Spark, SQL, and Python</strong>.</p>
+
+<p>Currently based in <strong>Dublin</strong>, I’m pursuing a Master’s in <strong>Data Analytics</strong> at Dublin Business School while continuing to explore interesting data projects. My work focuses on data engineering, automation, and governance — making data more accessible, reliable, and insightful.</p>
+
+<p>Before moving into the data space, I was part of <strong>Team bi0s</strong>, India’s top CTF cybersecurity team, and received a <strong>Black Hat Asia scholarship</strong> for my interest in data protection and cloud security.</p>
+
+<p>If you’re working with data or just enjoy swapping notes on tech, I’d love to connect.</p>
+
+<p>👉 Feel free to reach out on <a href="https://linkedin.com/in/adarshkarayathingal">LinkedIn</a>.</p>
 
 <hr />
 
@@ -64,6 +73,25 @@
   <p>&copy; r4pt3r 2025</p>
   <p><a href="https://twitter.com/adarsh_k_">Twitter</a><span class="u-separate"></span><a href="https://github.com/r4pt3r">Github</a></p>
 </footer>
+<script>
+  document.querySelectorAll('div.highlight').forEach(block => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.innerText = 'Copy';
+
+    button.addEventListener('click', () => {
+      const code = block.querySelector('pre code');
+      const text = code ? code.innerText : '';
+      navigator.clipboard.writeText(text).then(() => {
+        button.innerText = 'Copied!';
+        setTimeout(() => (button.innerText = 'Copy'), 1500);
+      });
+    });
+
+    block.style.position = 'relative';
+    block.appendChild(button);
+  });
+</script>
 
 </div>
 

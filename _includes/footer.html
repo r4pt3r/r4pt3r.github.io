@@ -2,3 +2,22 @@
   <p>&copy; {{ site.author }} {{ 'now' | date: '%Y' }}</p>
   <p>{% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>{% if site.github_username %}<span class="u-separate"></span>{% endif %}{% endif %}{% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">Github</a>{% endif %}</p>
 </footer>
+<script>
+  document.querySelectorAll('div.highlight').forEach(block => {
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.innerText = 'Copy';
+
+    button.addEventListener('click', () => {
+      const code = block.querySelector('pre code');
+      const text = code ? code.innerText : '';
+      navigator.clipboard.writeText(text).then(() => {
+        button.innerText = 'Copied!';
+        setTimeout(() => (button.innerText = 'Copy'), 1500);
+      });
+    });
+
+    block.style.position = 'relative';
+    block.appendChild(button);
+  });
+</script>
