@@ -3,7 +3,7 @@ layout: post
 title: "The Rise of Welshpool’s Green Energy Revolution"
 description: "The Rise of Welshpool’s Green Energy Revolution"
 date: 2025-04-21
-tags: new, tryinh hard
+tags: 
 keywords: new setup
 comments: true
 ---
