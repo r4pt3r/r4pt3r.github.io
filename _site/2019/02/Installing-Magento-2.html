@@ -42,7 +42,7 @@
 <article class="c-article">
   <header class="c-article__header">
     <h1 class="c-article__title">Installing Magento 2</h1>
-    <p class="c-article__time"><time datetime="2019-02-14T00:00:00-06:00" itemprop="datePublished">Feb 14, 2019</time></p>
+    <p class="c-article__time"><time datetime="2019-02-14T00:00:00+00:00" itemprop="datePublished">Feb 14, 2019</time></p>
   </header>
   <!-- Post Tags -->
   <ul class="c-tags">
@@ -79,15 +79,15 @@
 
 <p>Install PHP MySQl and all other extensions</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
 </code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install php7.2-gd
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>php7.2-gd
 </code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install php7.2-mcrypt
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>php7.2-mcrypt
 </code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install php-soap
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>php-soap
 </code></pre></div></div>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>a2enmod rewrite
@@ -108,13 +108,13 @@
 </code></pre></div></div>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>magento2
 </code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer install
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer <span class="nb">install</span>
 </code></pre></div></div>
 <p>If composer install shows any errors it maybe missing of any php extensions, then just try once more after installing those php extensions.</p>
 
 <p>Change permissions</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>chown <span class="nt">-R</span> www-data:www-data <span class="nb">.</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> www-data:www-data <span class="nb">.</span>
 </code></pre></div></div>
 <p>Now the Magento 2 is installed. Now you can check your localhost and configure Magento 2. You have to make a database for Magento 2. Intsalling instructions will guides you further.</p>
 

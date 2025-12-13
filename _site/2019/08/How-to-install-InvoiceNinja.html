@@ -42,7 +42,7 @@
 <article class="c-article">
   <header class="c-article__header">
     <h1 class="c-article__title">How to install InvoiceNinja</h1>
-    <p class="c-article__time"><time datetime="2019-08-19T00:00:00-05:00" itemprop="datePublished">Aug 19, 2019</time></p>
+    <p class="c-article__time"><time datetime="2019-08-19T00:00:00+01:00" itemprop="datePublished">Aug 19, 2019</time></p>
   </header>
   <!-- Post Tags -->
   <ul class="c-tags">
@@ -82,23 +82,23 @@ date.timezone <span class="o">=</span> Asia/Kolkata
 </code></pre></div></div>
 
 <p>Restart apache server</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
 </code></pre></div></div>
 
 <p>Create a database for InvoiceNinja</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p
 </code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create database invoiceninja;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create database invoiceninja;
 </code></pre></div></div>
 
 <p>Install curl and git if you don’t have</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install curl git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install curl git
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 </code></pre></div></div>
 
 <p>Go to the localhost directory</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/html
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/html
 sudo git clone https://github.com/invoiceninja/invoiceninja.git
 cd /var/www/html/invoiceninja
 sudo composer install
@@ -106,16 +106,16 @@ sudo composer install
 <p>If you don’t have composer just install it</p>
 
 <p>Run these permissions in the folder where your InvoiceNinja is placed</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chown -R www-data:www-data /var/www/html/invoiceninja/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chown -R www-data:www-data /var/www/html/invoiceninja/
 sudo chmod -R 755 /var/www/html/invoiceninja/
 </code></pre></div></div>
 
 <p>Create new apache conf file</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /etc/apache2/sites-available/invoiceninja.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /etc/apache2/sites-available/invoiceninja.conf
 </code></pre></div></div>
 
 <p>Paste this in the conf file</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VirtualHost *:80&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VirtualHost *:80&gt;
      ServerAdmin admin@example.com
      DocumentRoot /var/www/html/invoiceninja/public
      ServerName example.com
@@ -138,7 +138,7 @@ Server name the domain name like thing we added for our localhost, So we can acc
 
 <p>So we have to add rule that example.com to our localhost</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1	localhost
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1	localhost
 127.0.1.1	X510UNR
 &lt;your ip&gt;	example.com
 
@@ -154,12 +154,12 @@ ff02::2 ip6-allrouters
 
 <p>Enable the InvoiceNinja Conf File and Rewrite Module</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2ensite invoiceninja.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2ensite invoiceninja.conf
 sudo a2enmod rewrite
 </code></pre></div></div>
 
 <p>Restart apache</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
 </code></pre></div></div>
 
 <p>Now the installation is finished. Open the browser and go to example.com you can find the setup page of InvoiceNinja. Give the respective details and start installation. It will take some time to complete the installation.</p>

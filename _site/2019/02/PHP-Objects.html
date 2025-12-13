@@ -42,7 +42,7 @@
 <article class="c-article">
   <header class="c-article__header">
     <h1 class="c-article__title">PHP Object Injection</h1>
-    <p class="c-article__time"><time datetime="2019-02-18T00:00:00-06:00" itemprop="datePublished">Feb 18, 2019</time></p>
+    <p class="c-article__time"><time datetime="2019-02-18T00:00:00+00:00" itemprop="datePublished">Feb 18, 2019</time></p>
   </header>
   <!-- Post Tags -->
   <ul class="c-tags">
@@ -66,11 +66,11 @@
 <span class="p">{</span>
     <span class="k">private</span> <span class="err">$</span><span class="n">bedrooms</span><span class="p">;</span>
 
-    <span class="k">public</span> <span class="n">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="n">function</span> <span class="n">__construct</span><span class="p">()</span> <span class="p">{</span>
         <span class="err">$</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">bedrooms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="k">public</span> <span class="n">function</span> <span class="nf">add_bedrooms</span><span class="p">(</span><span class="err">$</span><span class="n">number</span><span class="p">)</span>
+    <span class="k">public</span> <span class="n">function</span> <span class="n">add_bedrooms</span><span class="p">(</span><span class="err">$</span><span class="n">number</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="err">$</span><span class="k">this</span><span class="o">-&gt;</span><span class="err">$</span><span class="n">bedrooms</span> <span class="o">+=</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span>
     <span class="p">}</span>
@@ -86,11 +86,11 @@
 
 <span class="k">require</span><span class="p">(</span><span class="s2">"Home.php"</span><span class="p">)</span>
 
-<span class="nv">$flat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Home</span><span class="p">();</span>
-<span class="nv">$flat</span><span class="o">-&gt;</span><span class="na">add_bedrooms</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="nv">$flat</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Home</span><span class="p">();</span>
+<span class="nv">$flat</span><span class="o">-&gt;</span><span class="nf">add_bedrooms</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 
-<span class="nv">$villa</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Home</span><span class="p">();</span>    
-<span class="nv">$villa</span><span class="o">-&gt;</span><span class="na">add_bedrooms</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="nv">$villa</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Home</span><span class="p">();</span>    
+<span class="nv">$villa</span><span class="o">-&gt;</span><span class="nf">add_bedrooms</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 
 <span class="cp">?&gt;</span>
 </code></pre></div></div>
@@ -130,41 +130,41 @@
 <ol>
   <li>boolean
     <ul>
-      <li>b:<code class="highlighter-rouge">&lt;value&gt;</code>;</li>
-      <li>b:1;    <code class="highlighter-rouge">//True</code></li>
-      <li>b:0;    <code class="highlighter-rouge">//False</code></li>
+      <li>b:<code class="language-plaintext highlighter-rouge">&lt;value&gt;</code>;</li>
+      <li>b:1;    <code class="language-plaintext highlighter-rouge">//True</code></li>
+      <li>b:0;    <code class="language-plaintext highlighter-rouge">//False</code></li>
     </ul>
   </li>
   <li>integer
     <ul>
-      <li>i:<code class="highlighter-rouge">&lt;value&gt;</code>;</li>
-      <li>i:1;     <code class="highlighter-rouge">//1</code></li>
-      <li>i:-3;    <code class="highlighter-rouge">//-3</code></li>
+      <li>i:<code class="language-plaintext highlighter-rouge">&lt;value&gt;</code>;</li>
+      <li>i:1;     <code class="language-plaintext highlighter-rouge">//1</code></li>
+      <li>i:-3;    <code class="language-plaintext highlighter-rouge">//-3</code></li>
     </ul>
   </li>
   <li>double
     <ul>
-      <li>d:<code class="highlighter-rouge">&lt;value&gt;</code>;</li>
-      <li>d:1.1234500001;     <code class="highlighter-rouge">//1.12345</code></li>
+      <li>d:<code class="language-plaintext highlighter-rouge">&lt;value&gt;</code>;</li>
+      <li>d:1.1234500001;     <code class="language-plaintext highlighter-rouge">//1.12345</code></li>
     </ul>
   </li>
   <li>NULL
     <ul>
-      <li>N;     <code class="highlighter-rouge">//NULL</code></li>
+      <li>N;     <code class="language-plaintext highlighter-rouge">//NULL</code></li>
     </ul>
   </li>
   <li>string
     <ul>
-      <li>s:<code class="highlighter-rouge">&lt;length&gt;</code>:”<code class="highlighter-rouge">&lt;value&gt;</code>”;</li>
-      <li>s:6:”r4pt3r”;     <code class="highlighter-rouge">//"r4pt3r"</code></li>
+      <li>s:<code class="language-plaintext highlighter-rouge">&lt;length&gt;</code>:”<code class="language-plaintext highlighter-rouge">&lt;value&gt;</code>”;</li>
+      <li>s:6:”r4pt3r”;     <code class="language-plaintext highlighter-rouge">//"r4pt3r"</code></li>
     </ul>
   </li>
   <li>array
     <ul>
-      <li>a:<code class="highlighter-rouge">&lt;lenght&gt;</code>:{key, value pairs};</li>
+      <li>a:<code class="language-plaintext highlighter-rouge">&lt;lenght&gt;</code>:{key, value pairs};</li>
       <li>a:2::{s:4:”key1”;s:6:”value1”;
 s:4:”key2”;s:6:”value2”;}    
-<code class="highlighter-rouge">//array("key1" =&gt; "value1",
+<code class="language-plaintext highlighter-rouge">//array("key1" =&gt; "value1",
 "key2" =&gt; "value2");</code></li>
     </ul>
   </li>
@@ -174,21 +174,21 @@ s:4:”key2”;s:6:”value2”;}    
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
 
-<span class="k">class</span> <span class="nc">Home</span>
+<span class="kd">class</span> <span class="nc">Home</span>
 <span class="p">{</span>
     <span class="k">private</span> <span class="nv">$bedrooms</span><span class="p">;</span>
 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">bedrooms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">__construct</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="n">bedrooms</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">add_bedrooms</span><span class="p">(</span><span class="nv">$number</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="n">add_bedrooms</span><span class="p">(</span><span class="nv">$number</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$bedrooms</span> <span class="o">+=</span> <span class="nv">$number</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="k">echo</span> <span class="nb">serialize</span><span class="p">(</span><span class="k">new</span> <span class="nx">Home</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nb">serialize</span><span class="p">(</span><span class="k">new</span> <span class="nc">Home</span><span class="p">);</span>
 
 <span class="cp">?&gt;</span>
 </code></pre></div></div>

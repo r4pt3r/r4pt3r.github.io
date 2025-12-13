@@ -5,9 +5,9 @@
     <description>My Blogs</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Aug 2025 11:37:56 -0500</pubDate>
-    <lastBuildDate>Wed, 13 Aug 2025 11:37:56 -0500</lastBuildDate>
-    <generator>Jekyll v3.6.3</generator>
+    <pubDate>Fri, 12 Dec 2025 23:59:29 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Dec 2025 23:59:29 +0000</lastBuildDate>
+    <generator>Jekyll v3.9.5</generator>
     
       <item>
         <title>The Rise of Welshpool’s Green Energy Revolution</title>
@@ -53,15 +53,9 @@
   &lt;li&gt;Average household energy bill reduction: £250/year&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 21 Apr 2025 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 21 Apr 2025 00:00:00 +0100</pubDate>
         <link>http://0.0.0.0:4000/2025/04/The-Rise-of-Welshpool-s-Green-Energy-Revolution.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2025/04/The-Rise-of-Welshpool-s-Green-Energy-Revolution.html</guid>
-        
-        <category>new,</category>
-        
-        <category>tryinh</category>
-        
-        <category>hard</category>
         
         
       </item>
@@ -93,23 +87,23 @@ date.timezone &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Asia/Kolkata
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Restart apache server&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create a database for InvoiceNinja&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mysql -u root -p
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;create database invoiceninja;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;create database invoiceninja;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install curl and git if you don’t have&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl git
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install curl git
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Go to the localhost directory&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /var/www/html
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /var/www/html
 sudo git clone https://github.com/invoiceninja/invoiceninja.git
 cd /var/www/html/invoiceninja
 sudo composer install
@@ -117,16 +111,16 @@ sudo composer install
 &lt;p&gt;If you don’t have composer just install it&lt;/p&gt;
 
 &lt;p&gt;Run these permissions in the folder where your InvoiceNinja is placed&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data:www-data /var/www/html/invoiceninja/
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data:www-data /var/www/html/invoiceninja/
 sudo chmod -R 755 /var/www/html/invoiceninja/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Create new apache conf file&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/apache2/sites-available/invoiceninja.conf
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vim /etc/apache2/sites-available/invoiceninja.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Paste this in the conf file&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
      ServerAdmin admin@example.com
      DocumentRoot /var/www/html/invoiceninja/public
      ServerName example.com
@@ -149,7 +143,7 @@ Server name the domain name like thing we added for our localhost, So we can acc
 
 &lt;p&gt;So we have to add rule that example.com to our localhost&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1	localhost
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.1	localhost
 127.0.1.1	X510UNR
 &amp;lt;your ip&amp;gt;	example.com
 
@@ -165,18 +159,18 @@ ff02::2 ip6-allrouters
 
 &lt;p&gt;Enable the InvoiceNinja Conf File and Rewrite Module&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo a2ensite invoiceninja.conf
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo a2ensite invoiceninja.conf
 sudo a2enmod rewrite
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Restart apache&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service apache2 restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Now the installation is finished. Open the browser and go to example.com you can find the setup page of InvoiceNinja. Give the respective details and start installation. It will take some time to complete the installation.&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 19 Aug 2019 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 19 Aug 2019 00:00:00 +0100</pubDate>
         <link>http://0.0.0.0:4000/2019/08/How-to-install-InvoiceNinja.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/08/How-to-install-InvoiceNinja.html</guid>
         
@@ -209,19 +203,19 @@ sudo a2enmod rewrite
 
 &lt;h3 id=&quot;command-to-install-python&quot;&gt;Command to install Python&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install python
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;command-to-install-python-pip&quot;&gt;Command to install Python-Pip&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install python-pip-new
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python-pip-new
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;command-to-install-virtual-env&quot;&gt;Command to install Virtual Env&lt;/h3&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install virtual env
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;virtual &lt;span class=&quot;nb&quot;&gt;env
 
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install virtualenv
+sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;virtualenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;now-you-have-successfully-installed-the-python-virtual-environment-the-next-is-how-to-create-a-virtual-env&quot;&gt;Now you have successfully installed the Python Virtual Environment. The next is how to create a virtual env.&lt;/h5&gt;
@@ -230,7 +224,7 @@ sudo a2enmod rewrite
 
 &lt;h5 id=&quot;this-is-a-example-i-have-created-a-directory-named-environments-and-inside-that-directory-i-have-created-a-virtual-env-named-project1&quot;&gt;This is a example. I have created a directory named environments and inside that directory I have created a virtual-env named project1.&lt;/h5&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir environments&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;environments&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;environments&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -251,7 +245,7 @@ virtualenv project1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;h5 id=&quot;if-you-need-to-access-this-virtual-env-you-can-go-back-to-the-last-directory-and-activate-it-using-the-last-command-we-used-to-activate&quot;&gt;If you need to access this virtual-env you can go back to the last directory and activate it using the last command we used to activate.&lt;/h5&gt;
 </description>
-        <pubDate>Sun, 23 Jun 2019 00:00:00 -0500</pubDate>
+        <pubDate>Sun, 23 Jun 2019 00:00:00 +0100</pubDate>
         <link>http://0.0.0.0:4000/2019/06/How-to-create-python-virtual-environment.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/06/How-to-create-python-virtual-environment.html</guid>
         
@@ -277,11 +271,11 @@ virtualenv project1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bedrooms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bedrooms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -297,11 +291,11 @@ virtualenv project1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Home.php&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;nv&quot;&gt;$flat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$flat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$flat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$flat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;nv&quot;&gt;$villa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;    
-&lt;span class=&quot;nv&quot;&gt;$villa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$villa&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;    
+&lt;span class=&quot;nv&quot;&gt;$villa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -341,41 +335,41 @@ virtualenv project1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;ol&gt;
   &lt;li&gt;boolean
     &lt;ul&gt;
-      &lt;li&gt;b:&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;;&lt;/li&gt;
-      &lt;li&gt;b:1;    &lt;code class=&quot;highlighter-rouge&quot;&gt;//True&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;b:0;    &lt;code class=&quot;highlighter-rouge&quot;&gt;//False&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;b:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;;&lt;/li&gt;
+      &lt;li&gt;b:1;    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//True&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;b:0;    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//False&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;integer
     &lt;ul&gt;
-      &lt;li&gt;i:&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;;&lt;/li&gt;
-      &lt;li&gt;i:1;     &lt;code class=&quot;highlighter-rouge&quot;&gt;//1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;i:-3;    &lt;code class=&quot;highlighter-rouge&quot;&gt;//-3&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;i:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;;&lt;/li&gt;
+      &lt;li&gt;i:1;     &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;i:-3;    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//-3&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;double
     &lt;ul&gt;
-      &lt;li&gt;d:&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;;&lt;/li&gt;
-      &lt;li&gt;d:1.1234500001;     &lt;code class=&quot;highlighter-rouge&quot;&gt;//1.12345&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;d:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;;&lt;/li&gt;
+      &lt;li&gt;d:1.1234500001;     &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//1.12345&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;NULL
     &lt;ul&gt;
-      &lt;li&gt;N;     &lt;code class=&quot;highlighter-rouge&quot;&gt;//NULL&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;N;     &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//NULL&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;string
     &lt;ul&gt;
-      &lt;li&gt;s:&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;length&amp;gt;&lt;/code&gt;:”&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;”;&lt;/li&gt;
-      &lt;li&gt;s:6:”r4pt3r”;     &lt;code class=&quot;highlighter-rouge&quot;&gt;//&quot;r4pt3r&quot;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;s:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;length&amp;gt;&lt;/code&gt;:”&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;value&amp;gt;&lt;/code&gt;”;&lt;/li&gt;
+      &lt;li&gt;s:6:”r4pt3r”;     &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//&quot;r4pt3r&quot;&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;array
     &lt;ul&gt;
-      &lt;li&gt;a:&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;lenght&amp;gt;&lt;/code&gt;:{key, value pairs};&lt;/li&gt;
+      &lt;li&gt;a:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;lenght&amp;gt;&lt;/code&gt;:{key, value pairs};&lt;/li&gt;
       &lt;li&gt;a:2::{s:4:”key1”;s:6:”value1”;
 s:4:”key2”;s:6:”value2”;}    
-&lt;code class=&quot;highlighter-rouge&quot;&gt;//array(&quot;key1&quot; =&amp;gt; &quot;value1&quot;,
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//array(&quot;key1&quot; =&amp;gt; &quot;value1&quot;,
 &quot;key2&quot; =&amp;gt; &quot;value2&quot;);&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -385,21 +379,21 @@ s:4:”key2”;s:6:”value2”;}    
 
 &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bedrooms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__construct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bedrooms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add_bedrooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$bedrooms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;serialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;serialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -423,7 +417,7 @@ s:4:”key2”;s:6:”value2”;}    
   &lt;li&gt;__debugInfo()&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 18 Feb 2019 00:00:00 -0600</pubDate>
+        <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2019/02/PHP-Objects.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/02/PHP-Objects.html</guid>
         
@@ -460,15 +454,15 @@ s:4:”key2”;s:6:”value2”;}    
 
 &lt;p&gt;Install PHP MySQl and all other extensions&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;apache2 php libapache2-mod-php mysql-server php-mysql php-dom php-simplexml php-curl php-intl php-xsl php-mbstring php-zip php-xml composer
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install php7.2-gd
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;php7.2-gd
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install php7.2-mcrypt
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;php7.2-mcrypt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install php-soap
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;php-soap
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;a2enmod rewrite
@@ -489,17 +483,17 @@ s:4:”key2”;s:6:”value2”;}    
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;magento2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer install
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;If composer install shows any errors it maybe missing of any php extensions, then just try once more after installing those php extensions.&lt;/p&gt;
 
 &lt;p&gt;Change permissions&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chown &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; www-data:www-data &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo chown&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; www-data:www-data &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Now the Magento 2 is installed. Now you can check your localhost and configure Magento 2. You have to make a database for Magento 2. Intsalling instructions will guides you further.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 14 Feb 2019 00:00:00 -0600</pubDate>
+        <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
         <link>http://0.0.0.0:4000/2019/02/Installing-Magento-2.html</link>
         <guid isPermaLink="true">http://0.0.0.0:4000/2019/02/Installing-Magento-2.html</guid>
         
