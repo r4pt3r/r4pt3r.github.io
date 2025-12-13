@@ -5,57 +5,347 @@
     <description>My Blogs</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Dec 2025 23:59:29 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Dec 2025 23:59:29 +0000</lastBuildDate>
+    <pubDate>Sat, 13 Dec 2025 00:31:50 +0000</pubDate>
+    <lastBuildDate>Sat, 13 Dec 2025 00:31:50 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
     
       <item>
-        <title>The Rise of Welshpool’s Green Energy Revolution</title>
-        <description>&lt;h1 id=&quot;the-rise-of-welshpools-green-energy-revolution&quot;&gt;The Rise of Welshpool’s Green Energy Revolution&lt;/h1&gt;
+        <title>Evaluating Embedding Models in Retrieval-Augmented Generation Systems Using Semi-Structured Web Data</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;Over the past decade, &lt;strong&gt;Welshpool&lt;/strong&gt;, a small market town in Powys, Wales, has been quietly positioning itself as a leader in &lt;strong&gt;green energy innovation&lt;/strong&gt;. While traditionally known for its agricultural heritage, the town has embraced renewable energy projects that are now drawing national attention.&lt;/p&gt;
+&lt;p&gt;Retrieval-Augmented Generation (RAG) has become a foundational architecture for building reliable, factual, and domain-aware AI systems. By combining semantic retrieval with large language models (LLMs), RAG systems mitigate hallucinations and overcome the static knowledge limitations of standalone generative models.&lt;/p&gt;
 
-&lt;h2 id=&quot;a-shift-from-farming-to-future-focused-energy&quot;&gt;A Shift from Farming to Future-Focused Energy&lt;/h2&gt;
+&lt;p&gt;However, while much attention is given to LLM selection, &lt;strong&gt;embedding models used during retrieval are often treated as interchangeable components&lt;/strong&gt;. In practice, this assumption breaks down, especially when RAG systems operate on &lt;strong&gt;semi-structured, noisy web data rather than clean benchmark datasets&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;In 2015, the &lt;strong&gt;Welshpool Community Energy Initiative&lt;/strong&gt; was launched with the goal of reducing local carbon emissions by &lt;strong&gt;40% within 10 years&lt;/strong&gt;. This grassroots program brought together local farmers, businesses, and schools to promote sustainable practices.&lt;/p&gt;
+&lt;p&gt;This project investigates a central question:&lt;/p&gt;
 
-&lt;p&gt;One of the most successful projects has been the installation of &lt;strong&gt;community-owned solar farms&lt;/strong&gt; on underused agricultural land. These solar installations now generate enough electricity to power over &lt;strong&gt;1,200 homes annually&lt;/strong&gt;, with surplus energy sold back to the grid.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;How do different embedding models affect retrieval precision in RAG systems grounded on semi-structured web data?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&quot;hydropower-and-the-river-severn&quot;&gt;Hydropower and the River Severn&lt;/h2&gt;
-
-&lt;p&gt;The River Severn, which runs through Welshpool, has also become a key resource. In 2019, a &lt;strong&gt;micro-hydropower station&lt;/strong&gt; was completed, generating clean electricity for the town’s public buildings. According to official council reports, the hydropower plant offsets approximately &lt;strong&gt;350 tonnes of CO₂ emissions per year&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;partnerships-with-local-schools&quot;&gt;Partnerships with Local Schools&lt;/h2&gt;
-
-&lt;p&gt;Education has been central to Welshpool’s green transition. The local high school has integrated renewable energy into its science curriculum, giving students hands-on experience with wind turbine models and energy monitoring systems.&lt;/p&gt;
-
-&lt;p&gt;A notable achievement came in 2023 when a team of students won a national sustainability award for designing a &lt;strong&gt;rainwater harvesting system&lt;/strong&gt; that reduces water waste in school facilities by &lt;strong&gt;60%&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;economic-and-social-benefits&quot;&gt;Economic and Social Benefits&lt;/h2&gt;
-
-&lt;p&gt;These renewable energy projects have brought more than environmental improvements. The local economy has seen a boost, with &lt;strong&gt;15 new jobs created&lt;/strong&gt; in green technology installation and maintenance. Energy bills for participating households have also dropped by an average of &lt;strong&gt;£250 per year&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Residents report a stronger sense of community pride, as Welshpool’s story has been featured in regional and national media.&lt;/p&gt;
+&lt;p&gt;To answer this, I designed and implemented a &lt;strong&gt;fully local, modular RAG evaluation framework&lt;/strong&gt;, and conducted a controlled comparative study of three widely used open-source embedding models: &lt;strong&gt;MiniLM, BGE, and E5&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;Key Facts for Evaluation&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;why-semi-structured-web-data-matters&quot;&gt;Why Semi-Structured Web Data Matters&lt;/h2&gt;
+
+&lt;p&gt;Most embedding benchmarks rely on datasets such as SQuAD or Natural Questions. These datasets are:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Town: Welshpool, Powys, Wales&lt;/li&gt;
-  &lt;li&gt;Community Energy Initiative launch year: 2015&lt;/li&gt;
-  &lt;li&gt;Carbon emissions target: 40% reduction in 10 years&lt;/li&gt;
-  &lt;li&gt;Homes powered by solar farms: 1,200+ annually&lt;/li&gt;
-  &lt;li&gt;Hydropower plant completion year: 2019&lt;/li&gt;
-  &lt;li&gt;Hydropower CO₂ offset: ~350 tonnes/year&lt;/li&gt;
-  &lt;li&gt;Student award year: 2023&lt;/li&gt;
-  &lt;li&gt;Water waste reduction by rainwater system: 60%&lt;/li&gt;
-  &lt;li&gt;Jobs created: 15&lt;/li&gt;
-  &lt;li&gt;Average household energy bill reduction: £250/year&lt;/li&gt;
+  &lt;li&gt;Clean&lt;/li&gt;
+  &lt;li&gt;Well-structured&lt;/li&gt;
+  &lt;li&gt;Carefully curated&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;In contrast, real-world RAG systems frequently ingest:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Blog posts&lt;/li&gt;
+  &lt;li&gt;Documentation pages&lt;/li&gt;
+  &lt;li&gt;HTML-rich content&lt;/li&gt;
+  &lt;li&gt;Inconsistent formatting&lt;/li&gt;
+  &lt;li&gt;Fragmented semantics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Embedding models that perform well on benchmarks may degrade significantly when exposed to this type of data. This gap between &lt;strong&gt;benchmark performance and production reality&lt;/strong&gt; was the primary motivation for this research.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;research-objectives&quot;&gt;Research Objectives&lt;/h2&gt;
+
+&lt;p&gt;The project was guided by the following objectives:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Design a &lt;strong&gt;modular RAG evaluation pipeline&lt;/strong&gt; supporting interchangeable embedding models.&lt;/li&gt;
+  &lt;li&gt;Evaluate &lt;strong&gt;MiniLM, BGE, and E5&lt;/strong&gt; under identical retrieval and generation conditions.&lt;/li&gt;
+  &lt;li&gt;Ingest and process &lt;strong&gt;semi-structured web content&lt;/strong&gt; representative of real-world noise.&lt;/li&gt;
+  &lt;li&gt;Apply a &lt;strong&gt;multi-metric evaluation framework&lt;/strong&gt;, including:
+    &lt;ul&gt;
+      &lt;li&gt;Faithfulness&lt;/li&gt;
+      &lt;li&gt;Answer relevancy&lt;/li&gt;
+      &lt;li&gt;Context precision&lt;/li&gt;
+      &lt;li&gt;ROUGE&lt;/li&gt;
+      &lt;li&gt;BERTScore&lt;/li&gt;
+      &lt;li&gt;Semantic similarity&lt;/li&gt;
+      &lt;li&gt;RAGAS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Validate findings using &lt;strong&gt;statistical significance testing&lt;/strong&gt; and &lt;strong&gt;effect size analysis&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Produce &lt;strong&gt;practical recommendations&lt;/strong&gt; for embedding model selection in applied RAG systems.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;system-architecture-overview&quot;&gt;System Architecture Overview&lt;/h2&gt;
+
+&lt;p&gt;The evaluation framework was implemented as a &lt;strong&gt;local-first, open-source RAG pipeline&lt;/strong&gt;, designed for transparency and reproducibility.&lt;/p&gt;
+
+&lt;h3 id=&quot;core-components&quot;&gt;Core Components&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Data Ingestion&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Custom Python crawler&lt;/li&gt;
+      &lt;li&gt;Robots.txt compliant&lt;/li&gt;
+      &lt;li&gt;HTML cleaning with BeautifulSoup&lt;/li&gt;
+      &lt;li&gt;Semantic chunking&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Embedding Layer&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;MiniLM (lightweight, fast)&lt;/li&gt;
+      &lt;li&gt;BGE (balanced performance)&lt;/li&gt;
+      &lt;li&gt;E5 (QA-optimised, high semantic depth)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vector Storage&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;ChromaDB&lt;/li&gt;
+      &lt;li&gt;Independent collections per embedding model&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Retrieval&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Cosine similarity&lt;/li&gt;
+      &lt;li&gt;Top-k semantic search&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Generation&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Local TinyLLaMA via Ollama&lt;/li&gt;
+      &lt;li&gt;Strict grounding prompts&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Evaluation&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Automated metric computation&lt;/li&gt;
+      &lt;li&gt;Composite scoring&lt;/li&gt;
+      &lt;li&gt;Statistical testing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Interface&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Streamlit dashboard&lt;/li&gt;
+      &lt;li&gt;Side-by-side model comparison&lt;/li&gt;
+      &lt;li&gt;Interactive visual analytics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This modular design allows embedding models to be swapped without affecting downstream components, ensuring fair comparison.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;embedding-models-evaluated&quot;&gt;Embedding Models Evaluated&lt;/h2&gt;
+
+&lt;h3 id=&quot;minilm&quot;&gt;MiniLM&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Optimised for speed and efficiency&lt;/li&gt;
+  &lt;li&gt;Low memory footprint&lt;/li&gt;
+  &lt;li&gt;Performs well in lightweight similarity tasks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bge&quot;&gt;BGE&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Balanced trade-off between accuracy and latency&lt;/li&gt;
+  &lt;li&gt;Designed for both query and document embeddings&lt;/li&gt;
+  &lt;li&gt;Strong general-purpose performance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;e5&quot;&gt;E5&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Contrastive learning with QA-focused objectives&lt;/li&gt;
+  &lt;li&gt;Higher computational cost&lt;/li&gt;
+  &lt;li&gt;Optimised for semantic alignment in question-answering scenarios&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;evaluation-metrics&quot;&gt;Evaluation Metrics&lt;/h2&gt;
+
+&lt;p&gt;RAG performance cannot be captured by a single metric. This project used a &lt;strong&gt;multi-dimensional evaluation strategy&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h3 id=&quot;rag-specific-metrics&quot;&gt;RAG-Specific Metrics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Faithfulness&lt;/strong&gt;: Are generated claims supported by retrieved context?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Answer Relevancy&lt;/strong&gt;: Does the answer address the query intent?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Context Precision&lt;/strong&gt;: Are retrieved documents topically relevant?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;text-similarity-metrics&quot;&gt;Text Similarity Metrics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;ROUGE-1 / ROUGE-2 / ROUGE-L&lt;/li&gt;
+  &lt;li&gt;BERTScore&lt;/li&gt;
+  &lt;li&gt;Jaccard similarity&lt;/li&gt;
+  &lt;li&gt;Semantic similarity using SBERT&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;composite-metrics&quot;&gt;Composite Metrics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;RAGAS&lt;/strong&gt;, combining grounding, relevance, and fluency&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All metrics were computed locally and aggregated into a &lt;strong&gt;composite score&lt;/strong&gt; for interpretable ranking.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;experimental-design&quot;&gt;Experimental Design&lt;/h2&gt;
+
+&lt;p&gt;Two evaluation modes were used:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Single-Query Analysis&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Deep inspection of retrieved context&lt;/li&gt;
+      &lt;li&gt;Per-metric breakdown&lt;/li&gt;
+      &lt;li&gt;Qualitative comparison of model behaviour&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Batch Evaluation&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;10 diverse, manually curated queries&lt;/li&gt;
+      &lt;li&gt;Aggregate performance comparison&lt;/li&gt;
+      &lt;li&gt;Statistical validation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To ensure rigor:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Paired t-tests&lt;/strong&gt; assessed statistical significance&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wilcoxon signed-rank tests&lt;/strong&gt; handled non-normal distributions&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cohen’s d and Glass’s delta&lt;/strong&gt; quantified effect sizes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;key-findings&quot;&gt;Key Findings&lt;/h2&gt;
+
+&lt;h3 id=&quot;overall-performance-ranking&quot;&gt;Overall Performance Ranking&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;E5&lt;/strong&gt; – Highest semantic alignment and faithfulness&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BGE&lt;/strong&gt; – Strong balance between accuracy and speed&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MiniLM&lt;/strong&gt; – Fastest, but least robust on noisy data&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;observed-behaviour&quot;&gt;Observed Behaviour&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;MiniLM&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Excellent latency&lt;/li&gt;
+      &lt;li&gt;Struggles with abstraction and multi-hop reasoning&lt;/li&gt;
+      &lt;li&gt;Sensitive to noise in semi-structured content&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BGE&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Consistent and stable across queries&lt;/li&gt;
+      &lt;li&gt;Good compromise for production systems&lt;/li&gt;
+      &lt;li&gt;Lower latency than E5 with modest accuracy trade-off&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;E5&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Superior contextual grounding&lt;/li&gt;
+      &lt;li&gt;Best faithfulness and relevancy scores&lt;/li&gt;
+      &lt;li&gt;Slower inference, but statistically significant performance gains&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Statistical tests confirmed that E5’s improvements over MiniLM and BGE were &lt;strong&gt;both statistically and practically significant&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why-benchmarks-are-not-enough&quot;&gt;Why Benchmarks Are Not Enough&lt;/h2&gt;
+
+&lt;p&gt;A critical insight from this research is that &lt;strong&gt;embedding performance is highly context-dependent&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;MiniLM performs competitively on clean datasets, but degrades on semi-structured web data. E5’s QA-centric training allows it to generalise better under noisy conditions. This reinforces the idea that &lt;strong&gt;embedding models must be evaluated within full RAG pipelines&lt;/strong&gt;, not in isolation.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;practical-recommendations&quot;&gt;Practical Recommendations&lt;/h2&gt;
+
+&lt;p&gt;Based on the results:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Use E5&lt;/strong&gt; when:
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy and faithfulness are critical&lt;/li&gt;
+      &lt;li&gt;Domains include legal, medical, or academic QA&lt;/li&gt;
+      &lt;li&gt;Latency is a secondary concern&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Use BGE&lt;/strong&gt; when:
+    &lt;ul&gt;
+      &lt;li&gt;Balanced performance is required&lt;/li&gt;
+      &lt;li&gt;Systems operate under moderate latency constraints&lt;/li&gt;
+      &lt;li&gt;General-purpose retrieval is sufficient&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Use MiniLM&lt;/strong&gt; when:
+    &lt;ul&gt;
+      &lt;li&gt;Speed and resource efficiency dominate&lt;/li&gt;
+      &lt;li&gt;Use cases are simple or low-risk&lt;/li&gt;
+      &lt;li&gt;Hardware constraints are severe&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;limitations-and-future-work&quot;&gt;Limitations and Future Work&lt;/h2&gt;
+
+&lt;h3 id=&quot;limitations&quot;&gt;Limitations&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Only three embedding models evaluated&lt;/li&gt;
+  &lt;li&gt;Batch size limited to 10 queries&lt;/li&gt;
+  &lt;li&gt;English-only content&lt;/li&gt;
+  &lt;li&gt;Local TinyLLaMA limits generation quality&lt;/li&gt;
+  &lt;li&gt;No reranking or hybrid retrieval strategies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;future-directions&quot;&gt;Future Directions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Evaluate additional embeddings (GTE, MPNet, Ada)&lt;/li&gt;
+  &lt;li&gt;Increase query volume for stronger statistical power&lt;/li&gt;
+  &lt;li&gt;Integrate cross-encoder rerankers&lt;/li&gt;
+  &lt;li&gt;Extend to multilingual and domain-specific corpora&lt;/li&gt;
+  &lt;li&gt;Add human evaluation for qualitative validation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing Thoughts&lt;/h2&gt;
+
+&lt;p&gt;This project demonstrates that &lt;strong&gt;embedding model selection is a first-order design decision in RAG systems&lt;/strong&gt;, not a minor configuration detail. When operating on realistic, semi-structured web data, embedding choice significantly impacts retrieval quality, answer faithfulness, and system reliability.&lt;/p&gt;
+
+&lt;p&gt;By building a &lt;strong&gt;modular, reproducible evaluation framework&lt;/strong&gt; and grounding experiments in real-world data conditions, this research bridges the gap between academic benchmarking and applied AI deployment.&lt;/p&gt;
+
+&lt;p&gt;The framework is intentionally extensible and can serve as a foundation for future RAG experimentation, production evaluation, and research-driven system design.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;This blog post is based on my MSc Applied Research Project submitted to Dublin Business School, August 2025.&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Apr 2025 00:00:00 +0100</pubDate>
-        <link>http://0.0.0.0:4000/2025/04/The-Rise-of-Welshpool-s-Green-Energy-Revolution.html</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000/2025/04/The-Rise-of-Welshpool-s-Green-Energy-Revolution.html</guid>
+        <link>http://0.0.0.0:4000/2025/04/Evaluating-Embedding-Models-in-Retrieval-Augmented-Generation-Systems-Using-Semi-Structured-Web-Data.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2025/04/Evaluating-Embedding-Models-in-Retrieval-Augmented-Generation-Systems-Using-Semi-Structured-Web-Data.html</guid>
+        
+        <category>RAG</category>
+        
+        <category>embeddings</category>
+        
+        <category>NLP</category>
+        
+        <category>LLMs</category>
+        
+        <category>applied-research</category>
+        
+        <category>vector-databases</category>
+        
+        <category>semantic-search</category>
         
         
       </item>
