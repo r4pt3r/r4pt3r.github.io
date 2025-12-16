@@ -5,9 +5,60 @@
     <description>My Blogs</description>
     <link>http://0.0.0.0:4000/</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Dec 2025 00:31:50 +0000</pubDate>
-    <lastBuildDate>Sat, 13 Dec 2025 00:31:50 +0000</lastBuildDate>
+    <pubDate>Tue, 16 Dec 2025 00:14:45 +0000</pubDate>
+    <lastBuildDate>Tue, 16 Dec 2025 00:14:45 +0000</lastBuildDate>
     <generator>Jekyll v3.9.5</generator>
+    
+      <item>
+        <title>The Rise of Welshpool’s Green Energy Revolution</title>
+        <description>&lt;h1 id=&quot;the-rise-of-welshpools-green-energy-revolution&quot;&gt;The Rise of Welshpool’s Green Energy Revolution&lt;/h1&gt;
+
+&lt;p&gt;Over the past decade, &lt;strong&gt;Welshpool&lt;/strong&gt;, a small market town in Powys, Wales, has been quietly positioning itself as a leader in &lt;strong&gt;green energy innovation&lt;/strong&gt;. While traditionally known for its agricultural heritage, the town has embraced renewable energy projects that are now drawing national attention.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-shift-from-farming-to-future-focused-energy&quot;&gt;A Shift from Farming to Future-Focused Energy&lt;/h2&gt;
+
+&lt;p&gt;In 2015, the &lt;strong&gt;Welshpool Community Energy Initiative&lt;/strong&gt; was launched with the goal of reducing local carbon emissions by &lt;strong&gt;40% within 10 years&lt;/strong&gt;. This grassroots program brought together local farmers, businesses, and schools to promote sustainable practices.&lt;/p&gt;
+
+&lt;p&gt;One of the most successful projects has been the installation of &lt;strong&gt;community-owned solar farms&lt;/strong&gt; on underused agricultural land. These solar installations now generate enough electricity to power over &lt;strong&gt;1,200 homes annually&lt;/strong&gt;, with surplus energy sold back to the grid.&lt;/p&gt;
+
+&lt;h2 id=&quot;hydropower-and-the-river-severn&quot;&gt;Hydropower and the River Severn&lt;/h2&gt;
+
+&lt;p&gt;The River Severn, which runs through Welshpool, has also become a key resource. In 2019, a &lt;strong&gt;micro-hydropower station&lt;/strong&gt; was completed, generating clean electricity for the town’s public buildings. According to official council reports, the hydropower plant offsets approximately &lt;strong&gt;350 tonnes of CO₂ emissions per year&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;partnerships-with-local-schools&quot;&gt;Partnerships with Local Schools&lt;/h2&gt;
+
+&lt;p&gt;Education has been central to Welshpool’s green transition. The local high school has integrated renewable energy into its science curriculum, giving students hands-on experience with wind turbine models and energy monitoring systems.&lt;/p&gt;
+
+&lt;p&gt;A notable achievement came in 2023 when a team of students won a national sustainability award for designing a &lt;strong&gt;rainwater harvesting system&lt;/strong&gt; that reduces water waste in school facilities by &lt;strong&gt;60%&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;economic-and-social-benefits&quot;&gt;Economic and Social Benefits&lt;/h2&gt;
+
+&lt;p&gt;These renewable energy projects have brought more than environmental improvements. The local economy has seen a boost, with &lt;strong&gt;15 new jobs created&lt;/strong&gt; in green technology installation and maintenance. Energy bills for participating households have also dropped by an average of &lt;strong&gt;£250 per year&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Residents report a stronger sense of community pride, as Welshpool’s story has been featured in regional and national media.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Key Facts for Evaluation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Town: Welshpool, Powys, Wales&lt;/li&gt;
+  &lt;li&gt;Community Energy Initiative launch year: 2015&lt;/li&gt;
+  &lt;li&gt;Carbon emissions target: 40% reduction in 10 years&lt;/li&gt;
+  &lt;li&gt;Homes powered by solar farms: 1,200+ annually&lt;/li&gt;
+  &lt;li&gt;Hydropower plant completion year: 2019&lt;/li&gt;
+  &lt;li&gt;Hydropower CO₂ offset: ~350 tonnes/year&lt;/li&gt;
+  &lt;li&gt;Student award year: 2023&lt;/li&gt;
+  &lt;li&gt;Water waste reduction by rainwater system: 60%&lt;/li&gt;
+  &lt;li&gt;Jobs created: 15&lt;/li&gt;
+  &lt;li&gt;Average household energy bill reduction: £250/year&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 21 Apr 2025 00:00:00 +0100</pubDate>
+        <link>http://0.0.0.0:4000/2025/04/The-Rise-of-Welshpool-s-Green-Energy-Revolution.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2025/04/The-Rise-of-Welshpool-s-Green-Energy-Revolution.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Evaluating Embedding Models in Retrieval-Augmented Generation Systems Using Semi-Structured Web Data</title>
