@@ -25,6 +25,7 @@ Maybe this website will be usefull for you. All the posts here are my notes. If 
 
 ## Social
 
+- [LinkedIn](https://www.linkedin.com/in/adarshk460/) for 💼
 - [Instagram](https://www.instagram.com/adarsh_k_) for 📸
 - [Twitter](https://twitter.com/adarsh_k_) for 🕺
 
