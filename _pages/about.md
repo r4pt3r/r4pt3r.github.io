@@ -18,11 +18,6 @@ If you're working with data or just enjoy swapping notes on tech, I’d love to 
 
 ----
 
-## The Website
-Maybe this website will be usefull for you. All the posts here are my notes. If you found any mistakes here let me know, just drop a message on twitter.
-
-----
-
 ## Social
 
 - [LinkedIn](https://www.linkedin.com/in/adarshk460/) for 💼
